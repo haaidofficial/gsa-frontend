@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography, TextField, Button, Grid2, CircularProgress } from '@mui/material';
 import FactoryIcon from '@mui/icons-material/Factory';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -9,9 +9,10 @@ import styles from './Contact.module.css';
 import { BASE_URL, Endpoints } from '@/constants/apiEndpoints';
 import axios from 'axios';
 import CommonAlert from '../Alerts';
+import { useRouter } from 'next/router';
 
 const ContactUsComp = () => {
-
+    const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -28,6 +29,25 @@ const ContactUsComp = () => {
         severity: 'success',
         message: '',
     });
+
+    const enqProduct = useRef(null);
+
+    useEffect(() => {
+        // Retrieve state from localStorage
+        productEnquiry();
+    }, []);
+
+
+    const productEnquiry = () => {
+        const storedState = localStorage.getItem('enq_product');
+        if (storedState) {
+            enqProduct.current = JSON.parse(storedState);
+            const referrerUrl = router.query?.referrer
+
+            console.log(enqProduct.current, referrerUrl, 'enqProduct.current');
+            
+        }
+    }
 
     const showAlert = (severity, message) => {
         setSnackbar({ open: true, severity, message });

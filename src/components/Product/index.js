@@ -8,6 +8,7 @@ import Link from 'next/link';
 import ProductList from '../ProductList';
 import HeaderBanner from '../Banner/HeaderBanner';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { useRouter } from 'next/router';
 
 const banners = [
     {
@@ -27,6 +28,7 @@ const ProductComp = ({ product }) => {
     const [otherProducts, setOtherProducts] = useState([]);
     const [openModal, setOpenModal] = useState(false); // State to control modal visibility
     const [modalImage, setModalImage] = useState(''); // State to store the image to display in modal
+    const router = useRouter();
 
     useEffect(() => {
         fetchProductsNavigation();
@@ -55,8 +57,17 @@ const ProductComp = ({ product }) => {
         setOpenModal(false); // Close the modal
     };
 
-    console.log(product, 'product');
-    
+    const sendProductEnquiryData = () => {
+        if (product) {
+            const state = product;
+            localStorage.setItem('enq_product', JSON.stringify(state));
+            router.push({
+                pathname: '/contact',
+                query: { referrer: 'enq' },
+            });
+        }
+    };
+
 
     return (
         <>
@@ -134,7 +145,7 @@ const ProductComp = ({ product }) => {
                     </Grid2>
                 </Grid2>
 
-                <Button className={styles.enquiryButton}>
+                <Button className={styles.enquiryButton} onClick={sendProductEnquiryData}>
                     {/* Icon inside a circular white box */}
                     <div className={styles.iconContainer}>
                         <MailOutlineIcon fontSize="small" />
