@@ -1,0 +1,28 @@
+.productHead {
+    font-size: 36px;
+}
+
+.productsList {
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .productHead {
+        text-align: center;
+    }
+
+    .titleTxt {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .productHead {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+}

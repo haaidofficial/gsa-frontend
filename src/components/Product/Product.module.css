@@ -1,0 +1,161 @@
+.productSection {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.productTitle {
+    background: black;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.otherProductTitle {
+    color: #0264ad;
+}
+
+.productOuterCont {
+    margin-top: 80px;
+}
+
+.productGridOuter {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.productDescImages {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.productImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.zoomIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.modalImage {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+
+/* Enquiry button start */
+.enquiryButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E73BE;
+    color: white;
+    border-radius: 50px;
+    padding: 5px 30px 5px 5px;
+    font-weight: bold;
+    text-transform: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.enquiryButton:hover {
+    background-color: #155A8F;
+    /* Darker blue on hover */
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #1E73BE;
+    width: 40px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Enquiry button end */
+
+@media (max-width: 768px) {
+    .productDescription * {
+        font-size: 14px !important;
+    }
+
+    .productDescImages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* .productImage {
+        width: 160px;
+        height: 160px;
+    } */
+
+    .productImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    .modalImage {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .modalImgWrapper {
+        width: 80%;
+        /* height: auto; */
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .productSection {
+        padding-top: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .productOuterCont {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 376px) {
+    .productGridOuter {
+        padding: 0 !important;
+    }
+}
+
+
+@media (max-width: 426px) {
+
+    .productSection {
+        padding-top: 0px;
+    }
+
+    .productTitle {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}

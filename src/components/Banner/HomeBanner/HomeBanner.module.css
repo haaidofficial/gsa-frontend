@@ -1,0 +1,69 @@
+.bannerHeading {
+    height: 100%;
+}
+
+.bannerHeadingTxt {
+    color: #0369ae;
+}
+
+.headingContainer {
+    display: flex;
+    /* To align text inline */
+    align-items: center;
+    font-size: 36px;
+    /* Adjust font size as per your design */
+    font-weight: normal;
+    /* Default font weight */
+}
+
+.welcomeText {
+    color: #000;
+    /* Black color for "Welcome To" */
+}
+
+.companyName {
+    color: #0264ad;
+}
+
+.flameImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.productHead {
+    font-size: 36px;
+}
+
+.slideImageContainer {}
+
+@media (max-width: 1024px) {
+    .slideImageContainer {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .headerBannerSliderSection {
+       display: none;
+    }
+
+    .slideImageContainer {
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slideImageContainer {
+        height: 160px;
+    }
+}
+
+@media (max-width: 450px) {
+    .slideImageContainer {
+        height: 110px;
+        background-position: center bottom;
+    }
+}

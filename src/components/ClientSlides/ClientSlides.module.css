@@ -1,0 +1,122 @@
+.customerSectionHd {
+    padding-bottom: 90px;
+    color: #0264ad;
+}
+
+.slideImg {
+    /* width: 200px;
+    height: 80px; */
+    max-width: 100%;
+}
+
+.slideHeadingTxt {
+    font-size: 15px;
+    margin-top: 30px;
+    text-align: center;
+    color: #000;
+}
+
+
+.slickNavBtnPrev {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.slickNavBtnNext {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Styles for the IconButton */
+.slickNavIcon {
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    transition: background 0.4s, color 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slickNavIconPrev {
+    margin-left: 5px;
+}
+
+/* Default SVG color */
+.slickNavIcon svg {
+    width: 15px;
+    height: 15px;
+    fill: #23b5b9;
+    /* Default color */
+    transition: fill 0.4s;
+}
+
+/* Hover effect for the IconButton */
+.slickNavIcon:hover {
+    background: #f15c58;
+    /* Background color on hover */
+}
+
+/* Change SVG color on hover */
+.slickNavIcon:hover svg {
+    fill: #fff;
+    /* Change to white when hovered */
+}
+
+.imageHolder {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.ourClientsSlider {
+    width: 100%;
+    /* Default full width */
+    max-width: 1200px;
+    /* Optional: Set a maximum width */
+    margin: 0 auto;
+    /* Center the slider */
+
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+        width: 90%;
+        /* Adjust width for medium screens */
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+        /* Adjust width for small screens */
+    }
+
+    @media (max-width: 480px) {
+        width: 85%;
+        /* Full width for extra small screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .imageHolder {
+        height: 80px;
+    }
+}
+
+@media (max-width: 500px) {
+    .customerSectionHd {
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .ourClientsSlider {
+        width: 80%;
+    }
+}

@@ -1,0 +1,60 @@
+.footer {
+    background-color: #f6f5f5;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.footerLinks a {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 24px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.pageLinks a {
+    display: inline-block;
+}
+
+.footerLinks a:hover {
+    text-decoration: underline;
+}
+
+.footerLinkHd {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #0264ad;
+    margin-bottom: 10px;
+}
+
+.footerLogo {
+    max-width: 100%;
+    height: auto;
+}
+
+.productsLinks a {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.footerInfoHd {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.infoLinks {
+    /* padding-left: 50px; */
+}
+
+.infoLinks a {
+    text-align: left;
+    color: #000;
+    text-transform: capitalize;
+    /* font-weight: 700; */
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 20px;
+    display: inline-block;
+}

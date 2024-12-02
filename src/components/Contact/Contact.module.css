@@ -1,0 +1,35 @@
+.contactUsSection {
+    background-color: #f9f9f9;
+    padding-top: 60px;
+}
+
+.contactInfoIcon {
+    width: 40px;
+    height: 40px;
+    color: #00a99d;
+}
+
+.infoHead {
+    color: #0264ad
+}
+
+.map {
+    padding: 20px 0 30px 0;
+}
+
+
+@media (max-width: 425px) {
+    .formLeft {
+        padding: 0 10px;
+    }
+
+    .infoTxt {
+        font-size: 14px;
+    }
+
+    .map {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}

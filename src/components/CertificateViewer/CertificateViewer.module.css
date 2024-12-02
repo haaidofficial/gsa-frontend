@@ -1,0 +1,10 @@
+.pdfLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdfLink svg{
+    width: 20px;
+    height: 20px;
+}

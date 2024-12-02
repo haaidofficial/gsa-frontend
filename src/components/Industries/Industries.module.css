@@ -1,0 +1,43 @@
+.customerSection {
+    padding-top: 60px;
+    padding-bottom: 70px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.customerSectionHd {
+    font-size: 36px;
+    color: #0264ad;
+    padding-bottom: 60px;
+}
+
+.customerCard {
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, .07);
+    color: #999999;
+    font-size: 18px;
+    padding-bottom: 5px;
+    background: #0264ad;
+    position: relative;
+    overflow: hidden;
+}
+
+.awardsCard {
+    padding-bottom: 15px;
+}
+
+.customerCard img {
+    max-width: 100%;
+}
+
+.customerCard img {
+    transition: filter 0.3s ease-in-out;
+    filter: brightness(1);
+}
+
+.customerCard:hover img {
+    filter: brightness(0.5);
+}
+
+.customerCardHd {
+    color: white;
+}

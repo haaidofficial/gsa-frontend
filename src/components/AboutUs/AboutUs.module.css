@@ -1,0 +1,31 @@
+.headingContainer {
+    font-size: 36px;
+    color: #0264ad;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992) {
+    .aboutUsMain {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutUsMain {
+        padding-bottom: 20px;
+    }
+
+    .headingContainer {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .aboutUsMain {
+        padding-top: 0px;
+    }
+
+    .desc{
+        font-size: 14px;
+    }
+}

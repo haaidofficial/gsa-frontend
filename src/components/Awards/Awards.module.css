@@ -1,0 +1,117 @@
+.awardsSection {
+    padding: 60px 0 50px 0;
+    border-bottom: 1px solid #dfdfdf;
+}.uspSection {
+    background-color: #f2f2f2;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.uspFeature {
+    color: #0264ad;
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.uspFeatureCard {
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uspFeatureCard:nth-child(1) {
+    /* padding: 30px 0px 0px 0px; */
+}
+
+.uspFeatureCard:hover {
+    background: #fff;
+    color: #505050;
+}
+
+.uspFeatureDesc {
+    color: #6b6b6b;
+}
+
+.customerSection {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.customerSectionHd {
+    font-size: 36px;
+    color: #0264ad;
+    padding-bottom: 60px;
+}
+
+.customerCard {
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, .07);
+    color: #999999;
+    font-size: 18px;
+    padding-bottom: 5px;
+    background: #0264ad;
+    margin-bottom: 25px;
+    position: relative;
+    /* To contain the pseudo-element */
+    overflow: hidden;
+    /* Ensures overlay doesn't spill outside */
+}
+
+.awardsCard {
+    padding-bottom: 15px;
+}
+
+.customerCard img {
+    max-width: 100%;
+}
+
+
+.customerCard img {
+    transition: filter 0.3s ease-in-out;
+    /* Smooth transition for the dimming effect */
+    filter: brightness(1);
+    /* Default: full brightness */
+}
+
+.customerCard:hover img {
+    filter: brightness(0.5);
+    /* Dimmed: reduces brightness to 50% */
+}
+
+.customerCardHd {
+    color: white;
+}
+
+.viewMoreBtn {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: #0264ad;
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    margin-top: 20px;
+    transition: .4s;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.viewMoreBtn:hover {
+    background: #0264ad;
+    color: #fff;
+}
+
+.awardsSection {
+    padding: 60px 0 50px 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.ourClientsSection {
+    padding: 70px 0 150px 0;
+    border-bottom: 1px solid #dfdfdf;
+}
