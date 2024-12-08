@@ -8,7 +8,8 @@ const adminPageRoutes = [
     '/admin/dashboard',
     '/admin/add-product',
     '/admin/account-settings',
-    '/admin/edit-product/[productId]'
+    '/admin/edit-product/[productId]',
+    '/admin/enquiries'
 ];
 
 export default function App({ Component, pageProps }) {

@@ -4,7 +4,16 @@ import { Box } from "@mui/material";
 import styles from './HeaderBanner.module.css';
 import Image from "next/image";
 
-const HeaderBanner = ({ banners }) => {
+const banners = [
+    {
+        image: "/assets/slides/header-banner-IMG_1071.webp",
+    },
+    {
+        image: "/assets/slides/header-banner-IMG_1072.webp",
+    },
+];
+
+const HeaderBanner = () => {
     // Slider settings
     const settings = {
         dots: true,

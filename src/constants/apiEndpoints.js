@@ -1,4 +1,5 @@
 export const BASE_URL = 'http://localhost:5000';
+export const APP_URL = 'http://localhost:3000/';
 
 export const Endpoints = {
     SignUp: '/api/auth/signup',
@@ -13,4 +14,8 @@ export const Endpoints = {
     ContactForm: '/api/email/contact-form',
     GetAccountDetails: '/api/auth/account-details',
     UpdateAccountDetails: '/api/auth/update-account',
+    CreateEnquiry: '/api/enquiries/create-enquiry',
+    GetEnquiries: '/api/enquiries/get-enquiries',
+    DeleteEnquiry: '/api/enquiries/delete-enquiry',
+
 }

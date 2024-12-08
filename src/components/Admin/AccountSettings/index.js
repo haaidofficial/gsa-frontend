@@ -18,6 +18,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { BASE_URL, Endpoints } from "@/constants/apiEndpoints";
 import styles from './AccountSettings.module.css';
 import CommonAlert from "@/components/Alerts";
+import { useAuth } from "@/context/AuthContext";
 
 const AccountSettingsComp = () => {
     const [user, setUser] = useState({
@@ -35,6 +36,8 @@ const AccountSettingsComp = () => {
         severity: 'success',
         message: '',
     });
+
+    const { token } = useAuth();
 
     const showAlert = (severity, message) => {
         setSnackbar({ open: true, severity, message });
@@ -92,7 +95,7 @@ const AccountSettingsComp = () => {
         try {
             const response = await axios.put(`${BASE_URL}${Endpoints.UpdateAccountDetails}`, dataToSend, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    Authorization: `Bearer ${token}`,
                 },
             });
             showAlert('success', 'Account updated successfully.')
@@ -106,23 +109,20 @@ const AccountSettingsComp = () => {
     };
 
     useEffect(() => {
-        axios
-            .get(`${BASE_URL}${Endpoints.GetAccountDetails}`, {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
-                },
-            })
-            .then((response) => {
-                setUser({
-                    name: response.data.user.name,
-                    email: response.data.user.email,
-                    newPassword: "",
-                });
-            })
-            .catch((err) => {
-                console.error(err);
-                showAlert('error', 'Failed to fetch account details. Please reload the page.');
+        axios.get(`${BASE_URL}${Endpoints.GetAccountDetails}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }).then((response) => {
+            setUser({
+                name: response.data.user.name,
+                email: response.data.user.email,
+                newPassword: "",
             });
+        }).catch((err) => {
+            console.error(err);
+            showAlert('error', 'Failed to fetch account details. Please reload the page.');
+        });
     }, []);
 
     return (

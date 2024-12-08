@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import styles from './ProductsList.module.css';
 import { useDrawer } from "@/context/AdminHeaderContext";
 import CommonAlert from "@/components/Alerts";
+import { useAuth } from "@/context/AuthContext";
 
 const productImagePath = `${BASE_URL}`;
 
@@ -27,6 +28,8 @@ const ProductList = () => {
         message: '',
     });
 
+    const { token } = useAuth();
+
     const showAlert = (severity, message) => {
         setSnackbar({ open: true, severity, message });
     };
@@ -40,7 +43,12 @@ const ProductList = () => {
     const fetchProducts = async (page, rowsPerPage) => {
         try {
             const response = await axios.get(
-                `${BASE_URL}${Endpoints.GetProducts}?page=${page + 1}&limit=${rowsPerPage}`
+                `${BASE_URL}${Endpoints.GetProducts}?page=${page + 1}&limit=${rowsPerPage}`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    },
+                }
             );
 
             if (response.data.products) {
@@ -74,7 +82,14 @@ const ProductList = () => {
         try {
             const response = await axios.post(`${BASE_URL}${Endpoints.DeleteProduct}`, {
                 productId
-            });
+            },
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
 
             if (response.data.message === "Product deleted successfully") {
                 showAlert('success', 'Product deleted successfully')

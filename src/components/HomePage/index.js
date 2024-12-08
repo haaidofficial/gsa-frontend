@@ -33,13 +33,13 @@ const HomePage = () => {
                             variant="h4"
                         >
                             <div className={styles.headingContainer}>
-                                <span className={styles.welcomeText}>Welcome To</span>&nbsp;
-                                <span className={styles.companyName}>Satramdas Gases Pvt. Ltd.</span>
+                                {/* <span className={styles.welcomeText}></span>&nbsp; */}
+                                <span className={styles.companyName}>S R GAS AGENCY</span>
                             </div>
                         </Typography>
-                        <div className={styles.flameImg}>
-                            <img src="/assets/flame.png" alt="flame image" />
-                        </div>
+                        {/* <div className={styles.flameImg}>
+                            <img src="/assets/logo.jpeg" alt="flame image" />
+                        </div> */}
                         <Typography
                             variant="body1"
                             sx={{
@@ -49,10 +49,7 @@ const HomePage = () => {
                             }}
                             className={styles.homepageDesc}
                         >
-                            Established in the year 1992, Satramdas Gases Pvt. Ltd. is an ISO 9001-2000 certified company. A leading
-                            manufacturer & supplier of industrial, process, and specialty gases. With over two decades, Satramdas Gases
-                            Pvt. Ltd. serves Indian as well as international customers as per their requirements with timely delivery of
-                            gases.
+                            Established in 1985, S R GAS AGENCY is a leading name in the industry, recognized for its excellence and reliability. As an ISO 9001:2015 certified company, we specialize in manufacturing and supplying a diverse range of industrial, process, and specialty gases.
                         </Typography>
 
                         <Typography
@@ -64,11 +61,10 @@ const HomePage = () => {
                             }}
                             className={styles.homepageDesc}
                         >
-                            Our principal range of gases include MEDICAL OXYGEN(MO2), NITROUS OXIDE(N2O) in cylinders & in tankers and
-                            industrial gases like NITROGEN(N2) & ARGON(Ar) of different grades in cylinders of different capacities.
+                            With four decades of experience, we have built a strong reputation for delivering high-quality gases, tailored to meet the specific requirements of our customers, with a focus on timely delivery and adherence to the highest safety standards.
                         </Typography>
 
-                        <Typography
+                        {/* <Typography
                             variant="body1"
                             sx={{
                                 color: "#333",
@@ -78,7 +74,7 @@ const HomePage = () => {
                             className={styles.homepageDesc}
                         >
                             We are also manufacturers and suppliers of Nitrous Oxide gas manufacturing plants of various capacities.
-                        </Typography>
+                        </Typography> */}
 
                         <Link href="/about">
                             <Button
@@ -126,12 +122,12 @@ const HomePage = () => {
                     >
                         <Box
                             component="img"
-                            src="assets/ico_quality.png"
+                            src="assets/icons/ico_quality.png"
                             alt="Quality Icon"
                             sx={{ width: 80, height: 80, mb: 2 }}
                         />
                         <Typography variant="h6" className={styles.uspFeature}>
-                            QUALITY
+                            QUALITY MATERIALS
                         </Typography>
                         <Typography variant="body2" className={styles.uspFeatureDesc}>
                             Manufacturer and Supplier of high purity gases
@@ -148,7 +144,7 @@ const HomePage = () => {
                     >
                         <Box
                             component="img"
-                            src="assets/ico_supply.png"
+                            src="assets/icons/ico_supply.png"
                             alt="Vast Supply Icon"
                             sx={{ width: 80, height: 80, mb: 2 }}
                         />
@@ -170,7 +166,7 @@ const HomePage = () => {
                     >
                         <Box
                             component="img"
-                            src="assets/ico_customer.png"
+                            src="assets/icons/ico_customer.png"
                             alt="Customer Satisfaction Icon"
                             sx={{ width: 80, height: 80, mb: 2 }}
                         />

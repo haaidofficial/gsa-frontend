@@ -8,6 +8,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 import styles from './EditProduct.module.css';
 import CommonAlert from "@/components/Alerts";
 import { useDrawer } from "@/context/AdminHeaderContext";
+import { useAuth } from "@/context/AuthContext";
 
 const productImagePath = `${BASE_URL}`;
 
@@ -41,6 +42,7 @@ const EditProduct = () => {
     };
 
     const { open } = useDrawer();
+    const { token } = useAuth();
     const router = useRouter();
     const { productId } = router.query;
 
@@ -48,7 +50,11 @@ const EditProduct = () => {
     useEffect(() => {
         if (productId) {
             axios
-                .get(`${BASE_URL}${Endpoints.GetProduct}/${productId}`)
+                .get(`${BASE_URL}${Endpoints.GetProduct}/${productId}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    }
+                })
                 .then((response) => {
                     const productData = response.data;
                     setProduct(productData);
@@ -69,7 +75,7 @@ const EditProduct = () => {
         }
     }, [productId]);
 
-    
+
     useEffect(() => {
         if (images.length > 4) {
             setErrors((prev) => ({ ...prev, images: "Maximum upload limit reached. You can upload up to 4 images only." }));
@@ -151,7 +157,10 @@ const EditProduct = () => {
                 `${BASE_URL}${Endpoints.UpdateProduct}/${productId}`,
                 formData,
                 {
-                    headers: { "Content-Type": "multipart/form-data" },
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                        Authorization: `Bearer ${token}`,
+                    },
                 }
             );
 

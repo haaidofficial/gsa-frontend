@@ -135,18 +135,18 @@ export default function Header() {
                     <Grid2 container alignItems="center" spacing={2}>
                         {/* Logo and Name (8 columns) */}
                         <Grid2 item xs={12} size={3}>
-                                <div className={`${styles.logoContainer} ${styles.desktopHeader}`}>
-                                    <Box className={styles.logo}>
-                                        <Image
-                                            src="/assets/footer-logo.png"
-                                            alt="Logo"
-                                            width={100}
-                                            height={80}
-                                            className={styles.objectFitImg}
-                                            onClick={() => router.push('/')}
-                                        />
-                                    </Box>
-                                </div>
+                            <div className={`${styles.logoContainer} ${styles.desktopHeader}`}>
+                                <Box className={styles.logo}>
+                                    <Image
+                                        src="/assets/logo.jpeg"
+                                        alt="S R GAS AGENCY Logo"
+                                        width={100}
+                                        height={120}
+                                        className={styles.objectFitImg}
+                                        onClick={() => router.push('/')}
+                                    />
+                                </Box>
+                            </div>
                         </Grid2>
 
                         {/* Certification Badges (4 columns) */}
@@ -334,7 +334,7 @@ const MobileMenu = ({ productsNavList }) => {
         <div className={`${!isOpen ? styles.menuBarBg : ''} ${isFixed ? styles.fixedMobileMenu : ''} ${styles.mobileHeader}`}>
             <Box className={styles.logo}>
                 <Image
-                    src="/assets/footer-logo.png"
+                    src="/assets/logo.jpeg"
                     alt="Logo"
                     width={100}
                     height={80}

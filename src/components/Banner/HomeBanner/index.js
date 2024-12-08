@@ -16,18 +16,45 @@ const HomeBanner = () => {
     };
 
     // Banner Data
+    // const banners = [
+    //     {
+    //         title: "Safe Transport",
+    //         image: "/assets/slider-1.jpg", // Replace with your image path
+    //     },
+    //     {
+    //         title: "Efficient Delivery",
+    //         image: "/assets/slider-1.jpg",
+    //     },
+    //     {
+    //         title: "Efficient Delivery",
+    //         image: "/assets/slider-1.jpg",
+    //     },
+    // ];
+
     const banners = [
         {
             title: "Safe Transport",
-            image: "/assets/slider-1.jpg", // Replace with your image path
+            image: "/assets/slides/header-banner-1-1.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slider-1.jpg",
+            image: "/assets/slides/header-banner-1-2.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slider-1.jpg",
+            image: "/assets/slides/IMG_0306.webp",
+        },
+        {
+            title: "Efficient Delivery",
+            image: "/assets/slides/IMG_0307.webp",
+        },
+        {
+            title: "Efficient Delivery",
+            image: "/assets/slides/IMG_0783.jpg",
+        },
+        {
+            title: "Efficient Delivery",
+            image: "/assets/slides/IMG_8820.jpg",
         },
     ];
 

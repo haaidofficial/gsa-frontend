@@ -1,8 +1,178 @@
 .headingContainer {
     font-size: 36px;
-    color: #0264ad;
+    color: #0c3895;
     margin-bottom: 30px;
 }
+
+
+/* list cards start */
+.olcards,
+.olcards * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.olcards {
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    --cardsGap: 1rem;
+    gap: var(--cardsGap);
+    padding-bottom: var(--cardsGap);
+}
+
+.olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
+}
+
+.olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+}
+
+.olcards li .content {
+    background-color: var(--cardColor);
+    --inlinePadding: 1em;
+    --boxPadding: 0.5em;
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    grid-template-areas:
+        "icon title"
+        "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon(0 0,
+            calc(100% - var(--arrowClipSize)) 0,
+            100% 50%,
+            calc(100% - var(--arrowClipSize)) 100%,
+            calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+            0 calc(100% + var(--cardsGap)));
+    position: relative;
+}
+
+.olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+}
+
+.olcards li .content::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+}
+
+.olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
+}
+
+.olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+    /* font-weight: 700; */
+}
+
+.olcards li .content .text {
+    grid-area: text;
+}
+
+/* list cards end */
+
+
+/* simple offerings list start */
+
+.offerings{
+    padding-bottom: 30px;
+}
+
+.elegantList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    counter-reset: customCounter;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    gap: 1rem;
+    /* Spacing between grid items */
+}
+
+.offeringsListItem {
+    counter-increment: customCounter;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.offeringsListItem::before {
+    content: counter(customCounter, decimal-leading-zero);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background: #eaeaea;
+    color: #555;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.offeringsListItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.offeringsListItem {
+    /* background: #f0f4f8; */
+}
+
+.offeringsListItem:nth-child(even) {
+    /* background: #ffffff; */
+}
+
+/* simple offerings list end */
+
 
 @media (max-width: 992) {
     .aboutUsMain {
@@ -25,7 +195,7 @@
         padding-top: 0px;
     }
 
-    .desc{
+    .desc {
         font-size: 14px;
     }
 }

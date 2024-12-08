@@ -1,0 +1,43 @@
+.enquiriesTable {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 100px;
+    padding-right: 40px;
+}
+
+
+.enquiriesLeftSpace {
+    padding-left: 230px;
+}
+
+
+@media (max-width: 1024px) {
+    .enquiriesLeftSpace {
+        padding-left: 250px;
+    }
+}
+
+@media (max-width: 768px){
+    .enquiriesTable{
+        padding-left: 60px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .messageModal {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .enquiriesLeftSpace {
+        padding-left: 0px;
+    }
+
+    .enquiriesTable{
+        padding-left: 50px;
+        padding-right: 0px;
+    }
+}

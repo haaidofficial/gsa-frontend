@@ -47,7 +47,7 @@
 @media (max-width: 768px) {
 
     .headerBannerSliderSection {
-       display: none;
+       /* display: none; */
     }
 
     .slideImageContainer {

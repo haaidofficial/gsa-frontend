@@ -17,6 +17,17 @@ const AboutUsComp = () => {
         },
     ];
 
+
+    const offerings = [
+        "Oxygen (O₂)",
+        "Nitrogen (N₂)",
+        "Argon (Ar)",
+        "Helium (He)",
+        "Hydrogen (H₂)",
+        "Carbon Dioxide (CO₂)",
+    ];
+
+
     return (
         <>
             <HeaderBanner banners={banners} />
@@ -36,7 +47,7 @@ const AboutUsComp = () => {
                         variant="h4"
                     >
                         <div className={styles.headingContainer}>
-                            <span className={styles.companyName}>Satramdas Gases Pvt. Ltd.</span>
+                            <span className={styles.companyName}>S R GAS AGENCY</span>
                         </div>
                     </Typography>
                     <Typography
@@ -48,7 +59,7 @@ const AboutUsComp = () => {
                         }}
                         className={styles.desc}
                     >
-                        Established in the year 1992, Satramdas Gases Pvt. Ltd. is an ISO 9001-2000 certified company. A leading manufacturer & supplier of industrial, process and speciality gases. With over the 2 decades, Satramdas Gases Pvt. Ltd. serves indian as well as international customers as per their requirements with timely delivery of gases.
+                        Established in 1985, S R GAS AGENCY is a leading name in the industry, recognized for its excellence and reliability. As an <b>ISO 9001:2015 certified</b> company, we specialize in manufacturing and supplying a diverse range of industrial, process, and specialty gases.
                     </Typography>
 
                     <Typography
@@ -60,7 +71,7 @@ const AboutUsComp = () => {
                         }}
                         className={styles.desc}
                     >
-                        Our principal range of gases include MEDICAL OXYGEN(MO2), NITROUS OXIDE(N2O) in cylinders & in tankers and industrial gases like NITROGEN(N2) & ARGON(Ar) of different grades in cylinders of different capacities..
+                        With four decades of experience, we have built a strong reputation for delivering high-quality gases, tailored to meet the specific requirements of our customers, with a focus on timely delivery and adherence to the highest safety standards.
                     </Typography>
 
                     <Typography
@@ -73,6 +84,96 @@ const AboutUsComp = () => {
                         className={styles.desc}
                     >
                         We provide gases of good quality with highest international safety standards. The company also follows Good Manufacturing Practices.
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: "#333",
+                            lineHeight: 1.6,
+                            marginBottom: "2rem",
+                            fontWeight: 600
+                        }}
+                        className={styles.desc}
+                    >
+                        Our Core Offerings
+                        We provide a comprehensive range of gases, including:
+                    </Typography>
+
+                    {/* our offerings 1st design start */}
+                    <Grid2 container className={styles.offerings}>
+                        <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+                            <ol className={styles.olcards}>
+                                <li style={{ "--cardColor": "#fc374e" }}>
+                                    <div className={styles.content}>
+                                        <div className={styles.title}>Oxygen (O₂)</div>
+                                    </div>
+                                </li>
+                                <li style={{ "--cardColor": "#36aeb3" }}>
+                                    <div className={styles.content}>
+                                        <div className={styles.title}>Nitrogen (N₂)</div>
+                                    </div>
+                                </li>
+                                <li style={{ "--cardColor": "#162d59" }}>
+                                    <div className={styles.content}>
+                                        <div className={styles.title}>Argon (Ar)</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </Grid2>
+                        <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+                            <ol className={styles.olcards} style={{ counterReset: "cardCount 3" }} >
+                                <li style={{ "--cardColor": "#AEB7B3" }}>
+                                    <div className={styles.content}>
+                                        <div className={styles.title}>Helium (He)</div>
+                                    </div>
+                                </li>
+                                <li style={{ "--cardColor": "#EFCB68" }}>
+                                    <div className={styles.content}>
+                                        <div className={styles.title}>Hydrogen (H₂)</div>
+                                    </div>
+                                </li>
+                                <li style={{ "--cardColor": "#f15f0e" }}>
+                                    <div className={styles.content}>
+                                        <div className={styles.title}>Carbon Dioxide (CO₂)</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </Grid2>
+                    </Grid2>
+                    {/* our offerings 1st design end */}
+
+                    {/* our offerings 2nd design start */}
+                    {/* <div className={styles.offerings}>
+                        <ol className={styles.elegantList}>
+                            {offerings.map((item, index) => (
+                                <li key={index} className={styles.offeringsListItem}>
+                                    {item}
+                                </li>
+                            ))}
+                        </ol>
+                    </div> */}
+                    {/* our offerings 2nd design end */}
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: "#333",
+                            lineHeight: 1.6,
+                            marginBottom: "2rem",
+                        }}
+                        className={styles.desc}
+                    >
+                        Our gases are available in cylinders of various capacities, catering to diverse industrial applications and ensuring flexibility for our clients.
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: "#333",
+                            lineHeight: 1.6,
+                            marginBottom: "2rem",
+                        }}
+                        className={styles.desc}
+                    >
+                        At S R GAS AGENCY, quality and safety are our top priorities. Every product undergoes rigorous quality checks to meet the highest industry standards, ensuring reliable and safe usage for our customers.
                     </Typography>
 
                 </Grid2>

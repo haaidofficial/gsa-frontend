@@ -6,7 +6,7 @@ import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
 import styles from './Contact.module.css';
-import { BASE_URL, Endpoints } from '@/constants/apiEndpoints';
+import { BASE_URL, Endpoints, APP_URL } from '@/constants/apiEndpoints';
 import axios from 'axios';
 import CommonAlert from '../Alerts';
 import { useRouter } from 'next/router';
@@ -30,7 +30,7 @@ const ContactUsComp = () => {
         message: '',
     });
 
-    
+
     const enqProduct = useRef(null);
 
     useEffect(() => {
@@ -43,11 +43,16 @@ const ContactUsComp = () => {
         const storedState = localStorage.getItem('enq_product');
         if (storedState) {
             enqProduct.current = JSON.parse(storedState);
-            const referrerUrl = router.query?.referrer
 
-            console.log(enqProduct.current, referrerUrl, 'enqProduct.current');
-            
         }
+    }
+
+    const removeEnquiry = () => {
+        const storedState = localStorage.getItem('enq_product');
+        if (storedState) {
+            localStorage.removeItem('enq_product');
+        }
+        enqProduct.current = null;
     }
 
     const showAlert = (severity, message) => {
@@ -129,9 +134,20 @@ const ContactUsComp = () => {
 
         if (validateForm()) {
 
+            const referrerUrl = router.query?.referrer;
+            const payload = JSON.parse(JSON.stringify(formData));
+            if (referrerUrl === 'enq') {
+                payload.referrer = `${APP_URL}products/${enqProduct.current?.pageUrl}`;
+
+                createProductEnquiry(payload);
+            }
+            else {
+                payload.referrer = '';
+            }
+
             try {
                 setIsLoading(true);
-                const response = await axios.post(`${BASE_URL}${Endpoints.ContactForm}`, formData, {
+                const response = await axios.post(`${BASE_URL}${Endpoints.ContactForm}`, payload, {
                     headers: {
                         'Content-Type': 'application/json',
                     },
@@ -166,6 +182,39 @@ const ContactUsComp = () => {
             contactNo: '',
             message: '',
         });
+    }
+
+    async function createProductEnquiry(formData) {
+        if (enqProduct.current) {
+            const productId = enqProduct.current?._id;
+
+            if (productId) {
+                const payload = {
+                    ...formData,
+                    productId
+                }
+
+                try {
+                    const res = await axios.post(`${BASE_URL}${Endpoints.CreateEnquiry}`, payload, {
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    });
+
+                    if (res.data) {
+                        if (res.data?.message === "Enquiry submitted successfully") {
+                            removeEnquiry();
+                        }
+                    }
+                    console.log(res, 'avksavhdvhskd');
+
+
+                } catch (error) {
+                    console.error('Create Enquiry Error:', error);
+                }
+            }
+        }
+
     }
 
 

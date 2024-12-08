@@ -44,7 +44,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 80px;
 }
 
 .objectFitImg {
@@ -94,6 +94,27 @@
     font-weight: 400;
 }
 
+
+.productMenuBtn {
+    border-radius: 5px;
+    /* Rounded corners */
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.productMenuBtn:hover {
+    background-color: #FCC737;
+    /* Elegant green shade */
+    color: black;
+    /* White text on hover */
+    transform: translateY(-2px);
+}
+
+.productMenuBtn:hover a {
+    color: black;
+}
+
 .navigationMenu {
     display: flex;
     justify-content: center;
@@ -111,23 +132,6 @@
     position: relative;
 }
 
-.navLink::before {
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    /* top: 0; */
-    top: -23px;
-    content: "";
-    background: white;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(0 117 140) 0%, rgb(82 82 82) 81%);
-    /* left: 5px; */
-    transform: scale(0, 1);
-    transition: .4s;
-}
-
-.navLink:hover:before {
-    transform: scale(1, 1);
-}
 
 .subMenuLink {
     text-decoration: none;
@@ -211,9 +215,10 @@
     text-decoration: none;
 }
 
-.mobileHeader{
+.mobileHeader {
     display: none;
 }
+
 /*  */
 
 
@@ -238,11 +243,11 @@
 
 @media (max-width: 768px) {
 
-    .desktopHeader{
+    .desktopHeader {
         display: none;
     }
 
-    .mobileHeader{
+    .mobileHeader {
         display: flex;
     }
 

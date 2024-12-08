@@ -8,6 +8,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import { useDrawer } from "@/context/AdminHeaderContext";
 import styles from './AddProduct.module.css';
 import CommonAlert from "@/components/Alerts";
+import { useAuth } from "@/context/AuthContext";
 
 const productImagePath = `${BASE_URL}`;
 
@@ -37,6 +38,7 @@ const AddProductComp = () => {
 
     const router = useRouter();
     const { open } = useDrawer();
+    const { token } = useAuth();
 
 
     useEffect(() => {
@@ -115,7 +117,7 @@ const AddProductComp = () => {
                 {
                     headers: {
                         "Content-Type": "multipart/form-data",
-                        Authorization: `Bearer ${localStorage.getItem("token")}`,
+                        Authorization: `Bearer ${token}`,
                     },
                 }
             );

@@ -18,7 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import EmailIcon from '@mui/icons-material/Email';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useRouter } from 'next/router';
@@ -38,9 +38,13 @@ const navigationList = [
         url: '/admin/add-product'
     },
     {
+        label: 'Enquiries',
+        url: '/admin/enquiries'
+    },
+    {
         label: 'Account Settings',
         url: '/admin/account-settings'
-    }
+    },
 ];
 
 const openedMixin = (theme) => ({
@@ -210,7 +214,7 @@ export default function AdminNavigationDrawer() {
                                             },
                                     ]}
                                 >
-                                    {index === 0 ? <InventoryIcon /> : index === 1 ? <AddCircleIcon /> : index === 2 ? <AccountCircleIcon /> : index === 3 ? <PeopleIcon /> : <SettingsIcon />}
+                                    {index === 0 ? <InventoryIcon /> : index === 1 ? <AddCircleIcon /> : index === 2 ? <EmailIcon /> : index === 3 ? <PeopleIcon /> : <SettingsIcon />}
                                 </ListItemIcon>
                                 <ListItemText
                                     primary={item.label}

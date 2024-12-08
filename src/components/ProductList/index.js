@@ -51,7 +51,8 @@ const ProductList = () => {
                     <Link className={styles.productsList} href={`/products/${item.pageUrl}`} key={index} passHref>
                         <ListItem
                             sx={{
-                                backgroundColor: colors[index % colors.length],
+                                // backgroundColor: colors[index % colors.length],
+                                backgroundColor: '#26A69A',
                                 color: 'white',
                                 marginBottom: "0.5rem",
                                 borderRadius: "5px",
@@ -78,6 +79,7 @@ const ProductList = () => {
                                     transform: 'scaleX(1)',
                                 },
                             }}
+                            // className={styles.productListText}
                         >
                             <Typography variant="h6" component="div" className={styles.titleTxt}>
                                 {item.title}

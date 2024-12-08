@@ -125,8 +125,8 @@ const Footer = () => {
                             <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
                                 <Box textAlign={'center'}>
                                     <img
-                                        src="/assets/footer-logo.png"
-                                        alt="SDGPL Logo"
+                                        src="/assets/logo.jpeg"
+                                        alt="S R GAS AGENCY Logo"
                                         className={styles.footerLogo}
                                     />
                                 </Box>
