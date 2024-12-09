@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { Box } from "@mui/material";
 import styles from './HomeBanner.module.css';
+import Image from "next/image";
 
 const HomeBanner = () => {
     // Slider settings
@@ -11,7 +12,7 @@ const HomeBanner = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: !true,
         autoplaySpeed: 3000,
     };
 
@@ -34,27 +35,28 @@ const HomeBanner = () => {
     const banners = [
         {
             title: "Safe Transport",
-            image: "/assets/slides/header-banner-1-1.webp",
+            // image: "/assets/slides/header-banner-1-1.webp",
+            image: "/assets/slides/one/IMG_1281.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slides/header-banner-1-2.webp",
+            image: "/assets/slides/one/IMG_1282.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slides/IMG_0306.webp",
+            image: "/assets/slides/one/IMG_1283.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slides/IMG_0307.webp",
+            image: "/assets/slides/one/IMG_1284.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slides/IMG_0783.jpg",
+            image: "/assets/slides/one/IMG_1285.webp",
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slides/IMG_8820.jpg",
+            image: "/assets/slides/one/IMG_1286.webp",
         },
     ];
 
@@ -64,29 +66,15 @@ const HomeBanner = () => {
             <Box sx={{ position: "relative", overflow: "hidden" }} className={styles.headerBannerSliderSection}>
                 <Slider {...settings}>
                     {banners.map((banner, index) => (
-                        <Box
-                            key={index}
-                            sx={{
-                                position: "relative",
-                                height: "480px", // Adjust height as needed
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                backgroundImage: `url(${banner.image})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}
-                            className={styles.slideImageContainer}
-                        >
-                            {/* <div className={styles.bannerHeading}>
-                            <Typography
-                                variant="h3"
-                                className={styles.bannerHeadingTxt}
-                            >
-                                {banner.title}
-                            </Typography>
-                        </div> */}
-                        </Box>
+                        <div key={index}>
+                            <Image
+                                src={banner.image}
+                                alt="Banner"
+                                width={1366}
+                                height={489}
+                                className={styles.slideImageContainer}
+                            />
+                        </div>
                     ))}
                 </Slider>
             </Box>

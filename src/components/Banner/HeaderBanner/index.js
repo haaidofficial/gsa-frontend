@@ -27,7 +27,6 @@ const HeaderBanner = () => {
 
     // Banner Data
 
-
     return (
         <>
             {/* Banner section start */}

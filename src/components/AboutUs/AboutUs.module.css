@@ -1,9 +1,41 @@
 .headingContainer {
-    font-size: 36px;
-    color: #0c3895;
-    margin-bottom: 30px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    /* text-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(255, 255, 255, 0.2); */
+    background: linear-gradient(90deg, #181819, #d78cfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
+.hd2Container {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.offeringsHd {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 26px;
+    color: #222;
+    margin-top: 3 0px;
+    margin-bottom: 10px;
+}
+
+.commonHd {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 26px;
+    color: #222;
+    margin-top: 3 0px;
+    margin-bottom: 10px;
+}
 
 /* list cards start */
 .olcards,
@@ -110,7 +142,7 @@
 
 /* simple offerings list start */
 
-.offerings{
+.offerings {
     padding-bottom: 30px;
 }
 
@@ -162,16 +194,61 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-
-.offeringsListItem {
-    /* background: #f0f4f8; */
-}
-
-.offeringsListItem:nth-child(even) {
-    /* background: #ffffff; */
-}
-
 /* simple offerings list end */
+
+
+.missionStatement,
+.visionStatement {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.missionStatement li,
+.visionStatement li {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    position: relative;
+    margin-bottom: 8px;
+    padding: 8px 12px 8px 32px;
+    background: linear-gradient(to right, #f8f8f8, #ffffff);
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.visionStatement li {
+    border-left: 4px solid #f44336;
+}
+
+.missionStatement li:before,
+.visionStatement li:before {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #4CAF50;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.visionStatement li:before {
+    color: #f44336;
+}
+
+.missionStatement li:hover,
+.visionStatement li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.missionStatement li:last-child,
+.visionStatement li:last-child {
+    margin-bottom: 0;
+}
 
 
 @media (max-width: 992) {

@@ -29,17 +29,11 @@ const HomePage = () => {
                 >
                     {/* Left Section - Welcome Text */}
                     <Grid2 item size={{ xs: 12, sm: 12, md: 8 }}>
-                        <Typography
-                            variant="h4"
-                        >
-                            <div className={styles.headingContainer}>
-                                {/* <span className={styles.welcomeText}></span>&nbsp; */}
-                                <span className={styles.companyName}>S R GAS AGENCY</span>
-                            </div>
-                        </Typography>
-                        {/* <div className={styles.flameImg}>
-                            <img src="/assets/logo.jpeg" alt="flame image" />
-                        </div> */}
+
+                        <h1 className={styles.headingContainer}>
+                            <span className={styles.companyName}>S R GAS AGENCY</span>
+                        </h1>
+
                         <Typography
                             variant="body1"
                             sx={{
@@ -51,7 +45,6 @@ const HomePage = () => {
                         >
                             Established in 1985, S R GAS AGENCY is a leading name in the industry, recognized for its excellence and reliability. As an ISO 9001:2015 certified company, we specialize in manufacturing and supplying a diverse range of industrial, process, and specialty gases.
                         </Typography>
-
                         <Typography
                             variant="body1"
                             sx={{
@@ -63,18 +56,6 @@ const HomePage = () => {
                         >
                             With four decades of experience, we have built a strong reputation for delivering high-quality gases, tailored to meet the specific requirements of our customers, with a focus on timely delivery and adherence to the highest safety standards.
                         </Typography>
-
-                        {/* <Typography
-                            variant="body1"
-                            sx={{
-                                color: "#333",
-                                lineHeight: 1.6,
-                                marginBottom: "2rem",
-                            }}
-                            className={styles.homepageDesc}
-                        >
-                            We are also manufacturers and suppliers of Nitrous Oxide gas manufacturing plants of various capacities.
-                        </Typography> */}
 
                         <Link href="/about">
                             <Button

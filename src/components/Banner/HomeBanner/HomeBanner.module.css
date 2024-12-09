@@ -36,7 +36,10 @@
     font-size: 36px;
 }
 
-.slideImageContainer {}
+.slideImageContainer {
+    width: 100%;
+    height: 489px;
+}
 
 @media (max-width: 1024px) {
     .slideImageContainer {
@@ -47,11 +50,11 @@
 @media (max-width: 768px) {
 
     .headerBannerSliderSection {
-       /* display: none; */
+        /* display: none; */
     }
 
     .slideImageContainer {
-        height: 200px;
+        height: 250px;
     }
 }
 
