@@ -2,6 +2,7 @@ import { Grid2, Typography } from "@mui/material";
 import styles from './AboutUs.module.css';
 import ProductList from "../ProductList";
 import HeaderBanner from "../Banner/HeaderBanner";
+import BrochureButton from "../Brochure";
 
 const AboutUsComp = () => {
 
@@ -218,9 +219,8 @@ const AboutUsComp = () => {
                     >
                         To be at the forefront of the gas industry, delivering exceptional value to our customers
                         while promoting sustainability and innovation.
-
-                        <span>We envision:</span>
                     </Typography>
+                    <h5 className={styles.smallHd}>We envision:</h5>
                     <ul className={styles.visionStatement}>
                         <li>Delivering cutting-edge solutions that empower industries and enhance operational efficiency.</li>
                         <li>Setting benchmarks in safety and reliability, making us the preferred choice for customers worldwide.</li>
@@ -229,6 +229,7 @@ const AboutUsComp = () => {
                         <li>At S R GAS AGENCY, we aim to shape the future of the industry by consistently exceeding expectations and contributing to global progress.</li>
                     </ul>
 
+                    <BrochureButton />
                 </Grid2>
 
                 {/* Right Section - Products */}

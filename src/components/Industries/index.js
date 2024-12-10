@@ -5,10 +5,10 @@ import HeaderBanner from "../Banner/HeaderBanner";
 const IndustriesComp = () => {
 
     const list = [
-        {
-            label: 'Hospitals',
-            img: '/assets/hospitals.jpg'
-        },
+        // {
+        //     label: 'Hospitals',
+        //     img: '/assets/hospitals.jpg'
+        // },
         {
             label: 'Glass Industry',
             img: '/assets/Glass-industry.jpg'
@@ -28,14 +28,6 @@ const IndustriesComp = () => {
         {
             label: 'Plastic Industries',
             img: '/assets/Plastic-Industry.jpg'
-        },
-        {
-            label: 'Food & Beverages',
-            img: '/assets/food-beverages.jpg'
-        },
-        {
-            label: 'Pharma Industries',
-            img: '/assets/Pharma-industry.jpg'
         },
         {
             label: 'Petrochemical Industries',

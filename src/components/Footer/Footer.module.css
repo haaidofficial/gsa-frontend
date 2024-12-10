@@ -61,3 +61,8 @@
     margin-top: 20px;
     display: inline-block;
 }
+
+.footerEmailLink{
+    margin: 10px 0 10px 0 !important;
+    text-transform: lowercase !important;
+}

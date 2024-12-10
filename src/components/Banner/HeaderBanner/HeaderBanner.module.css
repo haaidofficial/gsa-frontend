@@ -1,12 +1,48 @@
 .bannerImgHolder{
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 290px;
 }
 
 
 @media (max-width: 992px){
+    .bannerImgWrapper{
+        height: 250px;
+    }
+
     .bannerImgHolder{
-        height: 120px;
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 500px){
+    .bannerImgWrapper{
+        height: 200px;
+    }
+
+    .bannerImgHolder{
+        height: 200px;
+    }
+}
+
+@media (max-width: 430px){
+    .bannerImgWrapper{
+        height: 160px;
+    }
+
+    .bannerImgHolder{
+        height: 160px;
+    }
+}
+
+
+@media (max-width: 375px){
+    .bannerImgWrapper{
+        height: 110px;
+    }
+
+    .bannerImgHolder{
+        height: 110px;
     }
 }

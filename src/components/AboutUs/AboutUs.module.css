@@ -33,7 +33,15 @@
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 26px;
     color: #222;
-    margin-top: 3 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.smallHd{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    color: #222;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -204,6 +212,10 @@
     margin-bottom: 35px;
 }
 
+.missionStatement{
+    margin-bottom: 40px;
+}
+
 .missionStatement li,
 .visionStatement li {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -268,6 +280,17 @@
 }
 
 @media (max-width: 450px) {
+
+    .headingContainer{
+        margin-top: 10px;
+        font-size: 26px;
+    }
+
+    .hd2Container{
+        margin-top: 0;
+        font-size: 22px;
+    }
+
     .aboutUsMain {
         padding-top: 0px;
     }

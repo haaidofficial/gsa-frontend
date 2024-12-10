@@ -4,7 +4,7 @@ export const navigationMenu = [
         "url": "/"
     },
     {
-        "label": "ABOUT",
+        "label": "ABOUT US",
         "url": "/about"
     },
     {
@@ -13,17 +13,9 @@ export const navigationMenu = [
         "submenu": []
     },
     {
-        "label": "AWARDS/RECOGNITION",
-        "url": "/awards"
-    },
-    {
-        "label": "LICENCES",
+        "label": "CERTIFICATES/LICENCES",
         "url": "/licences"
     },
-    // {
-    //     "label": "ANNUAL RETURN",
-    //     "url": "/annual-return"
-    // },
     {
         "label": "INDUSTRIES",
         "url": "/industries"

@@ -6,10 +6,28 @@ import Image from "next/image";
 
 const banners = [
     {
-        image: "/assets/slides/header-banner-IMG_1071.webp",
+        title: "Safe Transport",
+        image: "/assets/slides/IMG_1281.webp",
     },
     {
-        image: "/assets/slides/header-banner-IMG_1072.webp",
+        title: "Efficient Delivery",
+        image: "/assets/slides/IMG_1282.webp",
+    },
+    {
+        title: "Efficient Delivery",
+        image: "/assets/slides/IMG_1283.webp",
+    },
+    {
+        title: "Efficient Delivery",
+        image: "/assets/slides/IMG_1284.webp",
+    },
+    {
+        title: "Efficient Delivery",
+        image: "/assets/slides/IMG_1285.webp",
+    },
+    {
+        title: "Efficient Delivery",
+        image: "/assets/slides/IMG_1286.webp",
     },
 ];
 
@@ -37,11 +55,13 @@ const HeaderBanner = () => {
                             key={index}
                             sx={{
                                 position: "relative",
-                                height: "150px",
+                                height: "290px",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
                             }}
+
+                            className={styles.bannerImgWrapper}
                         >
                             <div className={styles.bannerImgHolder}>
                                 <Image

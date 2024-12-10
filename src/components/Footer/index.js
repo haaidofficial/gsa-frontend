@@ -63,11 +63,6 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link href="/annual-return" sx={{ display: 'block', mb: 1 }}>
-                                Annual Return
-                            </Link>
-                        </div>
-                        <div>
                             <Link href="/contact" sx={{ display: 'block' }}>
                                 Contact
                             </Link>
@@ -78,7 +73,7 @@ const Footer = () => {
                 {/* PRODUCTS Section */}
                 {
                     (otherProducts?.length > 0) &&
-                    <Grid2 item size={{ xs: 12, sm: 6, md: 4 }}>
+                    <Grid2 item size={{ xs: 12, sm: 6, md: 3 }}>
                         <Box className={styles.productsLinks}>
                             <Typography className={styles.footerLinkHd} variant="h6" component="h2" sx={{ mb: 2 }}>
                                 PRODUCTS
@@ -99,26 +94,23 @@ const Footer = () => {
 
 
                 {/* COMPANY INFO Section */}
-                <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+                <Grid2 item size={{ xs: 12, sm: 12, md: 7 }}>
                     <Box className={styles.infoLinks}>
                         <Grid2 container>
                             <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
                                 <div>
-                                    <Typography sx={{ display: 'inline-block' }}>Call Us: </Typography>{' '}
-                                    <Link href="tel:+912248262439" sx={{ display: 'block', mt: 2 }}>
-                                        +91-22 48262439
-                                    </Link>
-                                </div>
-                                <div>
                                     <Typography sx={{ display: 'inline-block' }}> Mobile:  </Typography>{' '}
-                                    <Link href="tel:+919869261022" sx={{ display: 'block', mt: 2 }}>
-                                        +91 9869261022
+                                    <Link href="tel:+918850849983" sx={{ display: 'block', mt: 2 }}>
+                                        8850849983
                                     </Link>
                                 </div>
                                 <div>
                                     <Typography sx={{ display: 'inline-block' }}> Email:  </Typography>{' '}
-                                    <Link href="mailto:oxygenip@gmail.com">
-                                        oxygenip@gmail.com
+                                    <Link href="mailto:srgasagency500@gmail.com" className={styles.footerEmailLink}>
+                                        srgasagency500@gmail.com
+                                    </Link>
+                                    <Link href="mailto:sale.srgasagency@gmail.com" className={styles.footerEmailLink}>
+                                        sale.srgasagency@gmail.com
                                     </Link>
                                 </div>
                             </Grid2>
@@ -131,16 +123,18 @@ const Footer = () => {
                                     />
                                 </Box>
                                 <Typography sx={{ mt: 2, textAlign: 'left' }} className={styles.footerInfoHd}>
-                                    Plot No. RS6, TTC Industrial Area, Off Thane-Belapur Road, Rabale Navi
-                                    Mumbai - 400701
+                                    {/* <Link href="https://maps.app.goo.gl/rBnTudJVYkbEv9XB6" target='_blank'> */}
+                                    SNO 17, PIMPRIPADA, NR RAVI AUTO ENGINEERING M P ROAD,
+                                    THANE, Maharashtra, 400612
+                                    {/* </Link> */}
                                 </Typography>
                             </Grid2>
                         </Grid2>
 
                     </Box>
-                </Grid2>
-            </Grid2>
-        </Box>
+                </Grid2 >
+            </Grid2 >
+        </Box >
     );
 }
 
