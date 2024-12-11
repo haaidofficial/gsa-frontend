@@ -50,16 +50,17 @@
 }
 
 .customerCard {
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, .07);
     color: #999999;
     font-size: 18px;
     padding-bottom: 5px;
-    background: #0264ad;
+    background: #1cb283;
     margin-bottom: 25px;
     position: relative;
-    /* To contain the pseudo-element */
     overflow: hidden;
-    /* Ensures overlay doesn't spill outside */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
 }
 
 .awardsCard {

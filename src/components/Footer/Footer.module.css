@@ -44,7 +44,7 @@
 
 .footerInfoHd {
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 14px !important;
 }
 
 .infoLinks {

@@ -30,10 +30,6 @@ function AwardsComp() {
             img: '/assets/awards-7.jpg'
         },
         {
-            label: 'Pharma Industries',
-            img: '/assets/awards-8.jpg'
-        },
-        {
             label: 'Petrochemical Industries',
             img: '/assets/awards-9.jpg'
         },

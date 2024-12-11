@@ -7,42 +7,42 @@
 
 @media (max-width: 992px){
     .bannerImgWrapper{
-        height: 250px;
+        height: 250px !important;
     }
 
     .bannerImgHolder{
-        height: 250px;
+        height: 250px !important;
     }
 }
 
 
 @media (max-width: 500px){
     .bannerImgWrapper{
-        height: 200px;
+        height: 200px !important;
     }
 
     .bannerImgHolder{
-        height: 200px;
+        height: 200px !important;
     }
 }
 
 @media (max-width: 430px){
     .bannerImgWrapper{
-        height: 160px;
+        height: 160px !important;
     }
 
     .bannerImgHolder{
-        height: 160px;
+        height: 160px !important;
     }
 }
 
 
 @media (max-width: 375px){
     .bannerImgWrapper{
-        height: 110px;
+        height: 110px !important;
     }
 
     .bannerImgHolder{
-        height: 110px;
+        height: 110px !important;
     }
 }

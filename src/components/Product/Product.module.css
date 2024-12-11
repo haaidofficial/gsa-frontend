@@ -160,11 +160,7 @@
     }
 }
 
-@media (max-width: 376px) {
-    .productGridOuter {
-        padding: 0 !important;
-    }
-}
+
 
 
 @media (max-width: 426px) {
@@ -174,7 +170,31 @@
     }
 
     .productTitle {
-        padding: 10px 20px;
-        font-size: 20px;
+        padding: 10px 0px;
+        font-size: 22px !important;
+    }
+
+    .enquiryButton{
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .iconContainer{
+        width: 32px;
+        height: 32px;
+    }
+
+    .productDescription ol{
+        margin-left: 15px;
+    }
+
+    .productDescription ul{
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 376px) {
+    .productGridOuter {
+        padding: 0 !important;
     }
 }

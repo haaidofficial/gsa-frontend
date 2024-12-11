@@ -1,5 +1,9 @@
+.ourClientsSection {
+    padding: 40px 16px 50px 16px;
+}
+
 .customerSectionHd {
-    padding-bottom: 90px;
+    padding-bottom: 50px;
     color: #0c3895;
 }
 
@@ -18,7 +22,7 @@
 
 
 .slickNavBtnPrev {
-    position: absolute;
+    position: absolute !important;
     left: -30px;
     top: 50%;
     transform: translateY(-50%);
@@ -27,7 +31,7 @@
 }
 
 .slickNavBtnNext {
-    position: absolute;
+    position: absolute !important;
     right: -30px;
     top: 50%;
     transform: translateY(-50%);
@@ -110,7 +114,7 @@
 
 @media (max-width: 500px) {
     .customerSectionHd {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 }
 

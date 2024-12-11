@@ -145,13 +145,13 @@ const ProductComp = ({ product }) => {
                     </Grid2>
                 </Grid2>
 
-                <Button className={styles.enquiryButton} onClick={sendProductEnquiryData}>
+                <button className={styles.enquiryButton} onClick={sendProductEnquiryData}>
                     {/* Icon inside a circular white box */}
                     <div className={styles.iconContainer}>
                         <MailOutlineIcon fontSize="small" />
                     </div>
                     Enquiry
-                </Button>
+                </button>
             </div>
 
             {/* Modal to display larger image */}

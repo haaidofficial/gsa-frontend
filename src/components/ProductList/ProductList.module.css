@@ -1,5 +1,5 @@
 .productHead {
-    font-size: 36px;
+    font-size: 36px !important;
 }
 
 .productsList {
@@ -62,7 +62,7 @@
 
 @media (max-width: 500px) {
     .productHead {
-        font-size: 30px;
-        margin-top: 20px;
+        font-size: 30px !important;
+        margin-top: 20px !important;
     }
 }
