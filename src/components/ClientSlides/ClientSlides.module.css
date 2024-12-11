@@ -28,6 +28,7 @@
     transform: translateY(-50%);
     z-index: 2;
     cursor: pointer;
+    background-color: #BDBDBD !important;
 }
 
 .slickNavBtnNext {
@@ -37,6 +38,7 @@
     transform: translateY(-50%);
     z-index: 2;
     cursor: pointer;
+    background-color: #BDBDBD !important;
 }
 
 /* Styles for the IconButton */
