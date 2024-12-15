@@ -83,8 +83,13 @@ const AddProductComp = () => {
             formErrors.title = "Title is required";
             isValid = false;
         }
+        debugger
         if (!description || description.trim() === "<p></p>") {
             formErrors.description = "Description is required";
+            isValid = false;
+        }
+        if (description.trim()?.length < 10) {
+            formErrors.description = "Description must be at least 10 characters long";
             isValid = false;
         }
         if (images.length === 0) {

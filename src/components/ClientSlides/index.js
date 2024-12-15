@@ -26,17 +26,22 @@ const CustomNextArrow = ({ onClick }) => (
 
 const ClientsSlides = () => {
     const slides = [
-        { label: 'J J Hospital', path: '/assets/clients/jj-hospital.jpg' },
-        { label: 'Reliance Industries Ltd.', path: '/assets/clients/reliance.jpg' },
-        { label: 'Pidilite', path: '/assets/clients/pidilite.jpg' },
-        { label: 'Neo Wheels', path: '/assets/clients/neowheels.jpg' },
-        { label: 'Indian Petrochemicals Corporation Limited', path: '/assets/clients/ipcl.jpg' },
-        { label: 'Municipal Corporation of Greater Mumbai', path: '/assets/clients/bmc-logo.jpg' },
-        { label: 'Grauer & Weil (India) Limited', path: '/assets/clients/grauer-weil.jpg' },
-        { label: 'Bombay Hospital & Medical Research Centre', path: '/assets/clients/bombay-hospital-logo.jpg' },
-        { label: 'ESIC Hospital', path: '/assets/clients/esci-hos-logo.jpg' },
-        { label: 'Navi Mumbai Municipal Corporation', path: '/assets/clients/nmmc-logo.jpg' },
-        { label: 'MGM HOSPITAL', path: '/assets/clients/mgm-hospital.jpg' },
+        // { label: 'J J Hospital', path: '/assets/clients/jj-hospital.jpg' },
+        // { label: 'Reliance Industries Ltd.', path: '/assets/clients/reliance.jpg' },
+        // { label: 'Pidilite', path: '/assets/clients/pidilite.jpg' },
+        // { label: 'Neo Wheels', path: '/assets/clients/neowheels.jpg' },
+        // { label: 'Indian Petrochemicals Corporation Limited', path: '/assets/clients/ipcl.jpg' },
+        // { label: 'Municipal Corporation of Greater Mumbai', path: '/assets/clients/bmc-logo.jpg' },
+        // { label: 'Grauer & Weil (India) Limited', path: '/assets/clients/grauer-weil.jpg' },
+        // { label: 'Bombay Hospital & Medical Research Centre', path: '/assets/clients/bombay-hospital-logo.jpg' },
+        // { label: 'ESIC Hospital', path: '/assets/clients/esci-hos-logo.jpg' },
+        // { label: 'Navi Mumbai Municipal Corporation', path: '/assets/clients/nmmc-logo.jpg' },
+        // { label: 'MGM HOSPITAL', path: '/assets/clients/mgm-hospital.jpg' },
+        
+        { label: 'Reliance Industries', path: '/assets/clients/1/Reliance.webp' },
+        { label: 'Godrej Industries', path: '/assets/clients/1/Godrej.webp' },
+        { label: 'Hindustan Platinum', path: '/assets/clients/1/Hindustan-Platinum.webp' },
+        { label: 'Mukand Limited', path: '/assets/clients/1/Mukand-Limited.webp' },
     ];
 
     // const settings = {
@@ -74,7 +79,7 @@ const ClientsSlides = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 6, // Default for large screens
+        slidesToShow: 4, // Default for large screens
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,

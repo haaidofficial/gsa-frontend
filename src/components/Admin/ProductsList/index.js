@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Button, Box, IconButton, Tooltip, Modal } from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, Button, Box, IconButton, Tooltip, Modal, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 import axios from "axios";
 import { BASE_URL, Endpoints } from "@/constants/apiEndpoints";
 import Image from "next/image";
@@ -19,7 +19,6 @@ const ProductList = () => {
     const [page, setPage] = useState(0); // Pagination page state
     const [rowsPerPage, setRowsPerPage] = useState(10); // Rows per page
     const [totalProducts, setTotalProducts] = useState(0); // Total products for pagination
-    const router = useRouter();
     const [openModal, setOpenModal] = useState(false); // State to control modal visibility
     const [modalImage, setModalImage] = useState('');
     const [snackbar, setSnackbar] = useState({
@@ -27,8 +26,12 @@ const ProductList = () => {
         severity: 'success',
         message: '',
     });
+    const [openDeleteDialog, setOpenDeleteDialog] = useState(false); // Delete confirmation dialog state
+    const [productToDelete, setProductToDelete] = useState(null); // Product to delete
 
+    const router = useRouter();
     const { token } = useAuth();
+    const { open } = useDrawer();
 
     const showAlert = (severity, message) => {
         setSnackbar({ open: true, severity, message });
@@ -37,7 +40,6 @@ const ProductList = () => {
     const handleAlertClose = () => {
         setSnackbar((prev) => ({ ...prev, open: false }));
     };
-    const { open } = useDrawer();
 
     // Fetch products from the server with pagination
     const fetchProducts = async (page, rowsPerPage) => {
@@ -78,10 +80,10 @@ const ProductList = () => {
     };
 
     // Handle delete product
-    const handleDeleteProduct = async (productId) => {
+    const handleDeleteProduct = async () => {
         try {
             const response = await axios.post(`${BASE_URL}${Endpoints.DeleteProduct}`, {
-                productId
+                productId: productToDelete._id
             },
                 {
                     headers: {
@@ -92,13 +94,15 @@ const ProductList = () => {
             );
 
             if (response.data.message === "Product deleted successfully") {
-                showAlert('success', 'Product deleted successfully')
+                showAlert('success', 'Product deleted successfully');
             }
 
             fetchProducts(page, rowsPerPage); // Re-fetch the products after deletion
+            setOpenDeleteDialog(false); // Close the delete dialog
         } catch (error) {
             console.error("Error deleting product:", error);
             showAlert('error', 'Error deleting product!');
+            setOpenDeleteDialog(false); // Close the dialog even if there was an error
         }
     };
 
@@ -132,6 +136,15 @@ const ProductList = () => {
         setOpenModal(false);
     };
 
+    const handleDeleteDialogOpen = (product) => {
+        setProductToDelete(product);
+        setOpenDeleteDialog(true);
+    };
+
+    const handleDeleteDialogClose = () => {
+        setOpenDeleteDialog(false);
+        setProductToDelete(null);
+    };
 
     return (
         <>
@@ -209,7 +222,7 @@ const ProductList = () => {
                                             <div className={styles.productDescription} dangerouslySetInnerHTML={{ __html: product.description }} />
                                         </TableCell>
                                         <TableCell sx={{ border: "1px solid #ddd" }}>
-                                            <div className={styles.productImages} >
+                                            <div className={styles.productImages}>
                                                 {product.images.map((image, index) => (
                                                     <div key={index} style={{ position: 'relative' }}>
                                                         <Image
@@ -259,10 +272,8 @@ const ProductList = () => {
                                                 </IconButton>
                                             </Tooltip>
                                             <Tooltip title="Delete" placement="right-start">
-                                                <IconButton>
-                                                    <DeleteIcon
-                                                        onClick={() => handleDeleteProduct(product._id)}
-                                                    />
+                                                <IconButton onClick={() => handleDeleteDialogOpen(product)}>
+                                                    <DeleteIcon />
                                                 </IconButton>
                                             </Tooltip>
                                         </TableCell>
@@ -283,6 +294,7 @@ const ProductList = () => {
                     />
                 </div>
             </div>
+
             <Modal
                 open={openModal}
                 onClose={handleCloseModal}
@@ -294,15 +306,14 @@ const ProductList = () => {
             >
                 <Box
                     sx={{
-                        maxWidth: '90%', // Set a max-width for the modal content
-                        maxHeight: '90%', // Set a max-height for the modal content
+                        maxWidth: '90%',
+                        maxHeight: '90%',
                         backgroundColor: 'white',
                         boxShadow: 24,
                         padding: '20px',
                         borderRadius: '8px',
                         overflow: 'auto',
                     }}
-
                     className={styles.modalImgWrapper}
                 >
                     <img
@@ -312,6 +323,24 @@ const ProductList = () => {
                     />
                 </Box>
             </Modal>
+
+            <Dialog
+                open={openDeleteDialog}
+                onClose={handleDeleteDialogClose}
+            >
+                <DialogTitle>Delete Product</DialogTitle>
+                <DialogContent>
+                    Are you sure you want to delete this product? This action cannot be undone.
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleDeleteDialogClose} color="primary">
+                        Cancel
+                    </Button>
+                    <Button onClick={handleDeleteProduct} color="secondary">
+                        Delete
+                    </Button>
+                </DialogActions>
+            </Dialog>
 
             <CommonAlert
                 open={snackbar.open}

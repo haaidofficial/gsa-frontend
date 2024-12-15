@@ -262,7 +262,7 @@ const HomePage = () => {
 
 
             {/* Awards section start */}
-            <Box className={styles.awardsSection}>
+            {/* <Box className={styles.awardsSection}>
                 <Typography className={styles.customerSectionHd} variant="h4" sx={{ textAlign: 'center' }}>
                     Awards/Recognition
                 </Typography>
@@ -353,7 +353,7 @@ const HomePage = () => {
                         <Button className={styles.viewMoreBtn}>VIEW MORE</Button>
                     </Link>
                 </Box>
-            </Box>
+            </Box> */}
             {/* Awards section end */}
 
             {/* Our Customers section start */}
