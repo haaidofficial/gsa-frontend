@@ -1,4 +1,4 @@
-export const BASE_URL = process.env.NEXT_PUBLIC_SERVER_URL;
+export const BASE_URL = 'https://gsa-backend-ecgk.onrender.com';
 export const APP_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const Endpoints = {
