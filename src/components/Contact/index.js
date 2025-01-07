@@ -241,7 +241,7 @@ const ContactUsComp = () => {
                                     </Typography>
                                 </Box>
                                 <Typography className={styles.infoTxt} sx={{ marginTop: 1, color: '#666' }}>
-                                    Plot No. R56, TTC Industrial Area, Off Thane - Belapur Road, Rabale, Navi Mumbai - 400701
+                                    SNO 17, PIMPRIPADA, NR RAVI AUTO ENGINEERING M P ROAD, THANE, Maharashtra, 400612
                                 </Typography>
                             </Box>
 
@@ -253,21 +253,21 @@ const ContactUsComp = () => {
                                     </Typography>
                                 </Box>
                                 <Typography sx={{ marginTop: 1, color: '#666' }} className={styles.infoTxt}>
-                                    <a href="tel:+912248262439" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        +91-22-48262439
+                                    <a href="tel:+918850849983" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        8850849983
                                     </a>{' '}
-                                    /{' '}
+                                    {/* /{' '}
                                     <a href="tel:+912248262440" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         +91-22-48262440
                                     </a>{' '}
                                     /{' '}
                                     <a href="tel:+912248262441" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         +91-22-48262441
-                                    </a>
+                                    </a> */}
                                 </Typography>
                             </Box>
 
-                            <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: 2 }}>
+                            {/* <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: 2 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                     <SmartphoneIcon className={styles.contactInfoIcon} color="primary" />
                                     <Typography className={styles.infoHead} variant="h6">
@@ -287,7 +287,7 @@ const ContactUsComp = () => {
                                         +91-97680 21021
                                     </a>
                                 </Typography>
-                            </Box>
+                            </Box> */}
 
                             <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: 2 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -297,21 +297,17 @@ const ContactUsComp = () => {
                                     </Typography>
                                 </Box>
                                 <Typography sx={{ marginTop: 1, color: '#666' }}>
-                                    <a href="mailto:oxygenip@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        oxygenip@gmail.com
+                                    <a href="mailto:srgasagency500@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        srgasagency500@gmail.com
                                     </a>
                                     ,{' '}
-                                    <a href="mailto:gas@oxygenip.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        gas@oxygenip.com
-                                    </a>
-                                    ,{' '}
-                                    <a href="mailto:satramdas92@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        satramdas92@gmail.com
+                                    <a href="mailto:sale.srgasagency@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        sale.srgasagency@gmail.com
                                     </a>
                                 </Typography>
                             </Box>
 
-                            <Box>
+                            {/* <Box>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                     <LanguageIcon className={styles.contactInfoIcon} color="primary" />
                                     <Typography className={styles.infoHead} variant="h6">
@@ -323,7 +319,7 @@ const ContactUsComp = () => {
 
                                     </a>
                                 </Typography>
-                            </Box>
+                            </Box> */}
                         </Box>
                     </Grid2>
 
@@ -419,7 +415,7 @@ const ContactUsComp = () => {
 
                     <Grid2 item size={{ xs: 12, sm: 12, md: 12 }}>
                         <div className={styles.map}>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30154.160555315913!2d73.013262!3d19.139652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3c8639c13bf%3A0x7df7f9af221f28ff!2sSatramdas%20Gases%20Pvt.%20Ltd!5e0!3m2!1sen!2sus!4v1732730546253!5m2!1sen!2sus" width="100%" height="450" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7536.6890528532895!2d72.85957714863488!3d19.18014874300788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b70bd59b1689%3A0x69a5d04f26f19d5c!2sMalad%2C%20Pimpripada%2C%20Malad%20East%2C%20Mumbai%2C%20Maharashtra%20400097!5e0!3m2!1sen!2sin!4v1736280014863!5m2!1sen!2sin" width="100%" height="450" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
                         </div>
                     </Grid2>
                 </Grid2>

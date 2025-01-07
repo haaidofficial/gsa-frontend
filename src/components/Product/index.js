@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Box, Grid2, List, ListItem, Typography, Modal, IconButton, Tooltip, Button } from '@mui/material';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import styles from './Product.module.css';
-import { BASE_URL, Endpoints } from '@/constants/apiEndpoints';
+import { APP_URL, BASE_URL, Endpoints } from '@/constants/apiEndpoints';
 import axios from 'axios';
 import Link from 'next/link';
 import ProductList from '../ProductList';
 import HeaderBanner from '../Banner/HeaderBanner';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { useRouter } from 'next/router';
+import MetaTags from '../MetaTags';
 
 const banners = [
     {
@@ -29,6 +30,8 @@ const ProductComp = ({ product }) => {
     const [openModal, setOpenModal] = useState(false); // State to control modal visibility
     const [modalImage, setModalImage] = useState(''); // State to store the image to display in modal
     const router = useRouter();
+
+    console.log(product, 'product');
 
     useEffect(() => {
         fetchProductsNavigation();
@@ -69,8 +72,13 @@ const ProductComp = ({ product }) => {
     };
 
 
+    const metaTitle = product?.title;
+    const metaDescription = product?.title;
+    const metaUrl = `${APP_URL}products/${product?.pageUrl}`;
+
     return (
         <>
+            <MetaTags title={metaTitle} description={metaDescription} url={metaUrl} />
             <HeaderBanner banners={banners} />
             <div className={styles.productSection}>
                 <Grid2

@@ -14,6 +14,8 @@ import { usePathname, useParams } from 'next/navigation';
 import { useRouter } from 'next/router';
 import Footer from './Footer';
 import { DrawerProvider } from '@/context/AdminHeaderContext';
+import { APP_URL } from '@/constants/apiEndpoints';
+import MetaTags from './MetaTags';
 
 const adminPageRoutes = [
     '/admin/dashboard',
@@ -23,10 +25,31 @@ const adminPageRoutes = [
     '/admin/enquiries'
 ]
 
+
+const pagesMeta = [
+    { label: "Home", url: "/" },
+    { label: "About Us", url: "/about" },
+    { label: "Products", url: null, submenu: [] },
+    { label: "Certificates/Licences", url: "/licences" },
+    { label: "Industries", url: "/industries" },
+    { label: "Contact Us", url: "/contact" }
+  ]
+  
+const siteName = 'SRG';
+
 export default function RootLayout({ children }) {
     const metaData = {};
     // const pathname = usePathname();
     const router = useRouter();
+
+    const currentUrl = router.pathname;
+    // Find the menu item that matches the current URL
+    const page = pagesMeta.find(item => item.url === currentUrl);
+
+    // Default meta details if no match is found
+    const title = page ? `${page.label} | ${siteName}` : '';
+    const description = page ? `${page.label}` : '';
+    const url = page ? APP_URL : '';
 
     const renderHeader = () => {
         if (adminPageRoutes.includes(router.pathname)) {
@@ -40,13 +63,14 @@ export default function RootLayout({ children }) {
 
     return (
         <>
-            <Head>
+            {/* <Head>
                 <meta name='titile' content={metaData?.metaTitle} />
                 <title>{metaData?.metaTitle}</title>
                 <meta name='keywords' content={metaData?.metaKeywords} />
                 <meta name='description' content={metaData?.metaDescription} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            </Head>
+            </Head> */}
+            <MetaTags title={title} description={description} url={url} />
             {/* <Header /> */}
             {
                 isAdminPage ?
