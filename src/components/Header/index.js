@@ -229,6 +229,7 @@ export default function Header() {
 
 
 const MobileMenu = ({ productsNavList }) => {
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [submenuOpen, setSubmenuOpen] = useState(false);
     const [isFixed, setIsFixed] = useState(false);
@@ -314,8 +315,12 @@ const MobileMenu = ({ productsNavList }) => {
                                     {productsNavList
                                         .find((menu) => menu.label === 'PRODUCTS')
                                         ?.submenu?.map((submenuItem, index) => (
-                                            <ListItemButton key={index} sx={{ pl: 4 }}>
-                                                <Link href={submenuItem.url} className={styles.mobileMenuLink}>
+                                            <ListItemButton
+
+                                                key={index} sx={{ pl: 4 }}>
+                                                <Link href={submenuItem.url} className={styles.mobileMenuLink}
+                                                    onClick={() => setIsOpen(false)}
+                                                >
                                                     <ListItemText className={styles.mobileMenuText} primary={submenuItem.label} />
                                                 </Link>
 
