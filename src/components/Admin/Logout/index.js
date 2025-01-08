@@ -1,6 +1,7 @@
 import React from "react";
 import { IconButton, Tooltip } from "@mui/material";
 import { useRouter } from "next/router";
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 
 const LogoutButton = () => {
     const router = useRouter();
@@ -17,7 +18,8 @@ const LogoutButton = () => {
     return (
         <Tooltip title="Logout">
             <IconButton onClick={handleLogout}>
-                <img src="/assets/icons/logout.png" width={30} height={30} alt="Logout" />
+                <PowerSettingsNewIcon sx={{ fill: 'white', width: '30px', height: '30px' }} />
+                {/* <img src="/assets/icons/logout.png" width={30} height={30} alt="Logout" /> */}
             </IconButton>
         </Tooltip>
     );
