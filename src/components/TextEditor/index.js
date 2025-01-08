@@ -19,7 +19,7 @@ export default function TextEditor({ value, onChange }) {
                     borderRadius: "4px", // Rounded corners
                     padding: "10px", // Internal padding for content
                     backgroundColor: "#f9f9f9", // Light background color for better readability
-
+                    overflowY: "scroll"
                 }}
             />
             {/* <Box>
