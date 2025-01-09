@@ -1,5 +1,5 @@
 // context/AuthContext.js
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { jwtDecode } from "jwt-decode"; // npm install jwt-decode
 
@@ -14,20 +14,34 @@ export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [loading, setLoading] = useState(true);
     const router = useRouter();
+    const tokenExpiryTime = useRef('');
 
     useEffect(() => {
 
         const storedToken = localStorage.getItem("token");
 
-        if (storedToken && !isTokenExpired(storedToken)) {
-            setToken(storedToken);
-            setIsAuthenticated(true);
-        } else {
+        if (storedToken) {
+            if (isTokenExpired(storedToken)) {
+                handleSessionExpiry();
+            }
+            else {
+
+                setToken(storedToken);
+                setIsAuthenticated(true);
+                tokenExpiryCheck(storedToken);
+            }
+        }
+        else {
             setIsAuthenticated(false);
             setToken(null);
         }
 
         setLoading(false);
+
+        return () => {
+            clearTimeout(tokenExpiryTime.current);
+        }
+
     }, []);
 
     const isTokenExpired = (token) => {
@@ -52,6 +66,31 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(false);
         router.push("/admin/login");
     };
+
+    const tokenExpiryCheck = (token) => {
+        try {
+
+            const decodedToken = jwtDecode(token);
+            const currentTime = Date.now() / 1000;
+            const remainingTime = (decodedToken.exp - currentTime) * 1000;
+
+            if (tokenExpiryTime.current) {
+                clearTimeout(tokenExpiryTime.current);
+            }
+
+            tokenExpiryTime.current = setTimeout(() => {
+                handleSessionExpiry();
+            }, remainingTime);
+        } catch (error) {
+            handleSessionExpiry();
+        }
+    }
+
+
+    const handleSessionExpiry = () => {
+        alert("Your session has expired. Please log in again.");
+        logout();
+    }
 
     return (
         <AuthContext.Provider

@@ -83,7 +83,7 @@ const AddProductComp = () => {
             formErrors.title = "Title is required";
             isValid = false;
         }
-        debugger
+        
         if (!description || description.trim() === "<p></p>") {
             formErrors.description = "Description is required";
             isValid = false;

@@ -33,8 +33,8 @@ const pagesMeta = [
     { label: "Certificates/Licences", url: "/licences" },
     { label: "Industries", url: "/industries" },
     { label: "Contact Us", url: "/contact" }
-  ]
-  
+]
+
 const siteName = 'SRG';
 
 export default function RootLayout({ children }) {
@@ -60,6 +60,9 @@ export default function RootLayout({ children }) {
     };
 
     const isAdminPage = adminPageRoutes.includes(router.pathname);
+    console.log(router.pathname, 'router.pathname');
+
+    const isUserViewPage = !router.pathname.startsWith('/admin');
 
     return (
         <>
@@ -87,7 +90,7 @@ export default function RootLayout({ children }) {
             }
 
             {
-                !isAdminPage && <Footer />
+                isUserViewPage && <Footer />
             }
         </>
     );
