@@ -193,9 +193,6 @@ const EditProduct = () => {
     //className={`${open ? styles.addProductLeftSpace : ''}`}
 
 
-    console.log(images, 'images');
-
-
     let isImageUploadBtnDisabled = false;
     if (images.length > 3) {
         isImageUploadBtnDisabled = true

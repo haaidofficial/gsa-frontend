@@ -31,8 +31,6 @@ const ProductComp = ({ product }) => {
     const [modalImage, setModalImage] = useState(''); // State to store the image to display in modal
     const router = useRouter();
 
-    console.log(product, 'product');
-
     useEffect(() => {
         fetchProductsNavigation();
     }, []);

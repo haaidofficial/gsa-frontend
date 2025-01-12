@@ -15,19 +15,25 @@ const adminPageRoutes = [
 export default function App({ Component, pageProps }) {
     const router = useRouter();
     
-    
     const isAdminPage = adminPageRoutes.includes(router.pathname);
+    const is404Page = router.pathname === "/404";
 
     return (
-        // Wrap the app with AuthProvider only for admin pages
-        <RootLayout>
-            {isAdminPage ? (
-                <AuthProvider>
-                    <Component {...pageProps} />
-                </AuthProvider>
-            ) : (
+        <>
+            {is404Page ? (
+                // Render only the 404 component without layout
                 <Component {...pageProps} />
+            ) : (
+                <RootLayout>
+                    {isAdminPage ? (
+                        <AuthProvider>
+                            <Component {...pageProps} />
+                        </AuthProvider>
+                    ) : (
+                        <Component {...pageProps} />
+                    )}
+                </RootLayout>
             )}
-        </RootLayout>
+        </>
     );
 }

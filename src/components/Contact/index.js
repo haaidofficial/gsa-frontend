@@ -43,7 +43,6 @@ const ContactUsComp = () => {
         const storedState = localStorage.getItem('enq_product');
         if (storedState) {
             enqProduct.current = JSON.parse(storedState);
-
         }
     }
 
@@ -142,7 +141,9 @@ const ContactUsComp = () => {
                 createProductEnquiry(payload);
             }
             else {
-                payload.referrer = '';
+                payload.referrer = `${APP_URL}contact`;
+                // createProductEnquiry(payload);
+                // removeEnquiry();
             }
 
             try {
@@ -203,11 +204,9 @@ const ContactUsComp = () => {
 
                     if (res.data) {
                         if (res.data?.message === "Enquiry submitted successfully") {
-                            removeEnquiry();
+                            // removeEnquiry();
                         }
                     }
-                    console.log(res, 'avksavhdvhskd');
-
 
                 } catch (error) {
                     console.error('Create Enquiry Error:', error);

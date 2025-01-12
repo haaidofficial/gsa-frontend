@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
     };
 
     const isAdminPage = adminPageRoutes.includes(router.pathname);
-    console.log(router.pathname, 'router.pathname');
+  
 
     const isUserViewPage = !router.pathname.startsWith('/admin');
 
