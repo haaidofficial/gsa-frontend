@@ -1,4 +1,124 @@
-.mainSection{
-    padding-top: 50px;
-    padding-bottom: 40px;
+.mainSection {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.gridView {
+    display: flex;
+}
+
+.gridViewFrame {
+    margin-right: 15px;
+}
+
+.gridViewFrameItem {
+    overflow: hidden;
+    display: block;
+    transition: transform .4s;
+    border-radius: 24px;
+    margin-bottom: 15px;
+    float: left;
+    /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+}
+
+.gridViewFrameItem img {
+    /* width: 331px;
+    height: 331px; */
+}
+
+.thinFrameItem {
+    float: right;
+}
+
+.thinFrameItem img {
+    /* width: 211px !important;
+    height: 257px !important; */
+}
+
+.gridFrameImage {
+    display: block;
+    transition: transform .4s;
+}
+
+
+.gridViewFrameItem:hover img {
+    transform: scale(1.3);
+    transform-origin: 50% 50%;
+}
+
+.imgSquare {
+    width: 305px;
+    height: 250px;
+}
+
+
+@media (max-width: 1300px) {
+    .gridView {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .gridViewFrame {
+        margin: 0 !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gridViewFrameItem {
+        float: none;
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .gridViewFrameItem img {
+        width: 100%;
+        height: 331px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .gridViewFrameItem img {
+        height: 270px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gridViewFrameItem img {
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .gridViewFrame {
+        grid-template-columns: 1fr;
+    }
+
+    .gridViewFrameItem img {
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .mainSection{
+        padding-left: 20px;
+    }
+
+    .gridViewFrameItem {
+        width: 100%;
+    }
+
+    .gridViewFrameItem img {
+        height: 300px;
+    }
 }

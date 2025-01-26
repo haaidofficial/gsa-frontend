@@ -1,20 +1,24 @@
-import { Grid2 } from "@mui/material";
+import { Box, Grid2 } from "@mui/material";
 import HeaderBanner from "../Banner/HeaderBanner";
 import ProductList from "../ProductList";
 import CertificateViewer from "../CertificateViewer";
 import styles from './Licences.module.css';
+import Image from "next/image";
 
 function LicencesComp() {
 
     const banners = [
         {
-            image: "/assets/slider_licences.jpg",
+            image: "/assets/slides/IMG_1281-old.webp",
         },
         {
-            image: "/assets/slider_licences.jpg",
+            image: "/assets/slides/IMG_1281-old.webp",
         },
         {
-            image: "/assets/slider_licences.jpg",
+            image: "/assets/slides/IMG_1281-old.webp",
+        },
+        {
+            image: "/assets/slides/IMG_1281-old.webp",
         },
     ];
 
@@ -25,11 +29,14 @@ function LicencesComp() {
         },
     ];
 
+
+
+
     return (
         <>
             <HeaderBanner banners={banners} />
             <div className={styles.mainSection}>
-                <Grid2
+                {/* <Grid2
                     container
                     spacing={2}
                     sx={{
@@ -37,16 +44,126 @@ function LicencesComp() {
                         margin: '0 auto', // Center align
                         maxWidth: '1200px', // Optional: Set a max width for better layout control
                     }}
+                > */}
+                {/* <Grid2 item size={{ xs: 12, sm: 12, md: 12 }}> */}
+
+                {/* <CertificateViewer list={pdfList} /> */}
+                <Grid2
+                    container
                 >
-                    <Grid2 item size={{ xs: 12, sm: 6, md: 8 }}>
-
-                        <CertificateViewer list={pdfList} />
+                    <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+                        <div className={styles.gridView}>
+                            {/* first frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_1356-1.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                                <div className={`${styles.gridViewFrameItem} ${styles.thinFrameItem}`}>
+                                    <img
+                                        src={'/assets/infra/IMG_1358-2.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                            </div>
+                            {/* second frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_0783-4.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        // className={styles.gridFrameImage}
+                                        className={`${styles.gridFrameImage} ${styles.imgSquare}`}
+                                    />
+                                </div>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_1363-3.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                            </div>
+                        </div>
 
                     </Grid2>
-                    <Grid2 item size={{ xs: 12, sm: 6, md: 4 }}>
-                        <ProductList />
+                    <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
+                        <div className={styles.gridView}>
+
+                            {/* third frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_1355-5.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_1281-8.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                            </div>
+                            {/* four frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_1364-7.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_0307-6.webp'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
                     </Grid2>
+
                 </Grid2>
+
+
+                {/* </Grid2> */}
+                {/* <Grid2 item size={{ xs: 12, sm: 6, md: 4 }}>
+                        <ProductList />
+                    </Grid2> */}
+                {/* </Grid2> */}
             </div>
         </>
     );

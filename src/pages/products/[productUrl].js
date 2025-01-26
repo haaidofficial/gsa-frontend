@@ -10,8 +10,8 @@ const Product = ({ product }) => {
     }
 
     return (
-        <ProductComp product={product}/>
-       
+        <ProductComp product={product} />
+
     );
 };
 // Update the import paths based on your project structure

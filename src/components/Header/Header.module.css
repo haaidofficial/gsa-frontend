@@ -42,7 +42,7 @@
     width: 496px;
     height: 105px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-left: 10px;
 }
@@ -283,6 +283,11 @@
 
 
 @media (max-width: 500px) {
+
+    .logo {
+        justify-content: flex-start;
+    }
+
     .headerTfnContainer {
         display: flex;
         flex-direction: column;

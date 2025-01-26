@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography, TextField, Button, Grid2, CircularProgress } from '@mui/material';
 import FactoryIcon from '@mui/icons-material/Factory';
+import ApartmentIcon from '@mui/icons-material/Apartment';
 import PhoneIcon from '@mui/icons-material/Phone';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -234,13 +235,24 @@ const ContactUsComp = () => {
 
                             <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: 2 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                    <ApartmentIcon className={styles.contactInfoIcon} color="primary" />
+                                    <Typography className={styles.infoHead} variant="h6">
+                                        Office
+                                    </Typography>
+                                </Box>
+                                <Typography className={styles.infoTxt} sx={{ marginTop: 1, color: '#666' }}>
+                                    S. NO. 17, PIMPRIPADA, NR RAVI AUTO ENGINEERING M P ROAD, THANE, MAHARASHTRA - 400612, INDIA.
+                                </Typography>
+                            </Box>
+                            <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: 2 }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                     <FactoryIcon className={styles.contactInfoIcon} color="primary" />
                                     <Typography className={styles.infoHead} variant="h6">
                                         FACTORY
                                     </Typography>
                                 </Box>
                                 <Typography className={styles.infoTxt} sx={{ marginTop: 1, color: '#666' }}>
-                                    SNO 17, PIMPRIPADA, NR RAVI AUTO ENGINEERING M P ROAD, THANE, Maharashtra, 400612
+                                    SURVEY NO 140/1/2 NEAR POWER HOUSE. VILLAGE GOTEGHAR UTTARSHIV DISTRICT THANE 400612
                                 </Typography>
                             </Box>
 

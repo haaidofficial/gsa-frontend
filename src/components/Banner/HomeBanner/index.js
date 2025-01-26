@@ -43,10 +43,6 @@ const HomeBanner = () => {
         },
         {
             title: "Efficient Delivery",
-            image: "/assets/slides/IMG_1283.webp",
-        },
-        {
-            title: "Efficient Delivery",
             image: "/assets/slides/IMG_1284.webp",
         },
         {

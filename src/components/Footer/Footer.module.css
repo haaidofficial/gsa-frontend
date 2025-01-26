@@ -1,5 +1,5 @@
 .footer {
-    background: #f5f6f7;
+    background: #e6e6e6;
     box-shadow: 0 0 10px #0000005c;
     padding-top: 30px;
     padding-bottom: 60px;
@@ -62,7 +62,7 @@
     display: inline-block;
 }
 
-.footerEmailLink{
-    margin: 10px 0 10px 0 !important;
+.footerEmailLink {
+    margin: 0 !important;
     text-transform: lowercase !important;
 }

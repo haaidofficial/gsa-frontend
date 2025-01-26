@@ -47,7 +47,6 @@ const AboutUsComp = () => {
                     <h1 className={styles.headingContainer}>
                         <span className={styles.companyName}>S R GAS AGENCY</span>
                     </h1>
-                    <h3 className={styles.hd2Container}>Delivering Excellence Since 1985</h3>
                     <Typography
                         variant="body1"
                         sx={{
@@ -57,10 +56,12 @@ const AboutUsComp = () => {
                         }}
                         className={styles.desc}
                     >
-                        Established in 1985, <b>S R GAS AGENCY</b> has been at the forefront of the gas manufacturing and
-                        supply industry, renowned for its commitment to quality, reliability, and safety. As an <b>ISO
-                            9001:2015 certified company</b>, we specialize in delivering a comprehensive range of
-                        industrial, process, and specialty gases to meet diverse industry needs.
+                        Welcome to S R Gas Agency – Your Trusted Partner in Quality Gas Solutions
+                        Since our establishment in 1985, S R Gas Agency has been a pioneer in the industry, setting benchmarks for excellence, innovation, and reliability. As a proud ISO 9001:2015 certified company, we specialize in the manufacturing and supply of a comprehensive range of industrial, process, and specialty gases designed to cater to diverse applications across industries.
+                        <br /> <br />
+                        With nearly four decades of expertise, we have earned a reputation as a trusted partner, delivering exceptional quality and customized solutions that align with the unique needs of our clients. Our commitment to precision, safety, and timely delivery has positioned us as a preferred choice for businesses seeking dependable gas solutions.
+                        <br /> <br />
+                        At S R Gas Agency, we don’t just supply gases – we provide peace of mind through our unwavering dedication to quality, innovation, and customer satisfaction. Choose us for solutions that power your success.
                     </Typography>
 
 
@@ -74,10 +75,10 @@ const AboutUsComp = () => {
                         }}
                         className={styles.desc}
                     >
-                        With over <b>four decades of expertise</b>, we have built a solid reputation for:
-                        <b>High-quality products</b> tailored to customer requirements.
-                        <b>Timely delivery</b> to ensure uninterrupted operations.
-                        <b>Uncompromising safety standards</b>, making us a trusted partner across industries.
+                        With over four decades of expertise, we have built a solid reputation for:
+                        High-quality products tailored to customer requirements.
+                        Timely delivery to ensure uninterrupted operations.
+                        Uncompromising safety standards, making us a trusted partner across industries.
                     </Typography>
                     {/* 
                     <Typography
@@ -92,7 +93,7 @@ const AboutUsComp = () => {
                         We provide gases of good quality with highest international safety standards. The company also follows Good Manufacturing Practices.
                     </Typography> */}
 
-                    <h4 className={styles.offeringsHd}>Our Core Offerings</h4>
+                    <h4 className={styles.hd2Container}>Our Core Offerings</h4>
 
                     <Typography
                         variant="body1"
@@ -186,7 +187,7 @@ const AboutUsComp = () => {
                         At S R GAS AGENCY, quality and safety are our top priorities. Every product undergoes rigorous quality checks to meet the highest industry standards, ensuring reliable and safe usage for our customers.
                     </Typography>
 
-                    <h4 className={styles.commonHd}>Our Mission</h4>
+                    <h4 className={styles.hd2Container}>Our Mission</h4>
                     <Typography
                         variant="body1"
                         sx={{
@@ -208,7 +209,7 @@ const AboutUsComp = () => {
                     </ul>
 
 
-                    <h4 className={styles.commonHd}>Our Vision</h4>
+                    <h4 className={styles.hd2Container}>Our Vision</h4>
                     <Typography
                         variant="body1"
                         sx={{

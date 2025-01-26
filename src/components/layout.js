@@ -30,7 +30,7 @@ const pagesMeta = [
     { label: "Home", url: "/" },
     { label: "About Us", url: "/about" },
     { label: "Products", url: null, submenu: [] },
-    { label: "Certificates/Licences", url: "/licences" },
+    { label: "Infrastructure", url: "/infrastructure" },
     { label: "Industries", url: "/industries" },
     { label: "Contact Us", url: "/contact" }
 ]

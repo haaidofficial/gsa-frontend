@@ -4,6 +4,32 @@ import { Box } from "@mui/material";
 import styles from './HeaderBanner.module.css';
 import Image from "next/image";
 
+// const banners = [
+//     {
+//         title: "Safe Transport",
+//         image: "/assets/slides/IMG_1281.webp",
+//     },
+//     {
+//         title: "Efficient Delivery",
+//         image: "/assets/slides/IMG_1282.webp",
+//     },
+//     {
+//         title: "Efficient Delivery",
+//         image: "/assets/slides/IMG_1283.webp",
+//     },
+//     {
+//         title: "Efficient Delivery",
+//         image: "/assets/slides/IMG_1284.webp",
+//     },
+//     {
+//         title: "Efficient Delivery",
+//         image: "/assets/slides/IMG_1285.webp",
+//     },
+//     {
+//         title: "Efficient Delivery",
+//         image: "/assets/slides/IMG_1286.webp",
+//     },
+// ];
 const banners = [
     {
         title: "Safe Transport",
@@ -12,10 +38,6 @@ const banners = [
     {
         title: "Efficient Delivery",
         image: "/assets/slides/IMG_1282.webp",
-    },
-    {
-        title: "Efficient Delivery",
-        image: "/assets/slides/IMG_1283.webp",
     },
     {
         title: "Efficient Delivery",
@@ -29,8 +51,11 @@ const banners = [
         title: "Efficient Delivery",
         image: "/assets/slides/IMG_1286.webp",
     },
+    {
+        title: "Efficient Delivery",
+        image: "/assets/slides/IMG_1356.webp",
+    },
 ];
-
 const HeaderBanner = () => {
     // Slider settings
     const settings = {

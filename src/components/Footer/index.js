@@ -58,6 +58,11 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div>
+                            <Link href="/infrastructure" sx={{ display: 'block', mb: 1 }}>
+                                Infrastructure
+                            </Link>
+                        </div>
+                        <div>
                             <Link href="/industries" sx={{ display: 'block', mb: 1 }}>
                                 Industries
                             </Link>
@@ -105,7 +110,7 @@ const Footer = () => {
                                     </Link>
                                 </div>
                                 <div>
-                                    <Typography sx={{ display: 'inline-block' }}> Email:  </Typography>{' '}
+                                    <Typography sx={{ display: 'inline-block', marginBottom: '5px' }}> Email:  </Typography>{' '}<br />
                                     <Link href="mailto:srgasagency500@gmail.com" className={styles.footerEmailLink}>
                                         srgasagency500@gmail.com
                                     </Link>
@@ -116,11 +121,13 @@ const Footer = () => {
                             </Grid2>
                             <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
                                 <Box textAlign={'center'}>
-                                    <img
-                                        src="/assets/logo.jpeg"
-                                        alt="S R GAS AGENCY Logo"
-                                        className={styles.footerLogo}
-                                    />
+                                    <Link href="/admin/login" target='_blank'>
+                                        <img
+                                            src="/assets/logo.jpeg"
+                                            alt="S R GAS AGENCY Logo"
+                                            className={styles.footerLogo}
+                                        />
+                                    </Link>
                                 </Box>
                                 <Typography sx={{ mt: 2, textAlign: 'left' }} className={styles.footerInfoHd}>
                                     {/* <Link href="https://maps.app.goo.gl/rBnTudJVYkbEv9XB6" target='_blank'> */}

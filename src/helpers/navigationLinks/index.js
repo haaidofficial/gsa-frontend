@@ -13,8 +13,8 @@ export const navigationMenu = [
         "submenu": []
     },
     {
-        "label": "CERTIFICATES/LICENCES",
-        "url": "/licences"
+        "label": "INFRASTRUCTURE",
+        "url": "/infrastructure"
     },
     {
         "label": "INDUSTRIES",
