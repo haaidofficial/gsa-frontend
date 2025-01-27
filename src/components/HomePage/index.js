@@ -43,7 +43,7 @@ const HomePage = () => {
                             }}
                             className={styles.homepageDesc}
                         >
-                            Established in 1985, S R GAS AGENCY is a leading name in the industry, recognized for its excellence and reliability. As an ISO 9001:2015 certified company, we specialize in manufacturing and supplying a diverse range of industrial, process, and specialty gases.
+                            Welcome to S R Gas Agency – Your Trusted Partner in Quality Gas Solutions. Since 1985, S R Gas Agency has been a leader in the gas industry, setting benchmarks in innovation, reliability, and quality. As an ISO 9001:2015 certified company, we specialize in manufacturing and supplying a wide range of industrial, process, and specialty gases tailored to meet diverse industrial needs. With nearly four decades of expertise, we have built a reputation as a dependable partner for delivering high-quality, customized gas solutions designed to support business growth and operational excellence. Our extensive product portfolio, which includes industrial gases like oxygen, nitrogen, and argon, as well as specialty and medical-grade gases, reflects our commitment to serving industries such as manufacturing, healthcare, energy, and food processing.
                         </Typography>
                         <Typography
                             variant="body1"
@@ -54,7 +54,19 @@ const HomePage = () => {
                             }}
                             className={styles.homepageDesc}
                         >
-                            With four decades of experience, we have built a strong reputation for delivering high-quality gases, tailored to meet the specific requirements of our customers, with a focus on timely delivery and adherence to the highest safety standards.
+                            At S R Gas Agency, we prioritize safety, precision, and sustainability in all aspects of our operations. Our stringent quality control measures, advanced technologies, and eco-friendly practices ensure reliable, safe, and environmentally responsible solutions for our clients. We pride ourselves on our customer-focused approach, delivering tailored services that align with the unique requirements of our partners, while ensuring timely and efficient delivery through a robust supply chain network.
+                        </Typography>
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                color: "#333",
+                                lineHeight: 1.6,
+                                marginBottom: "1rem",
+                            }}
+                            className={styles.homepageDesc}
+                        >
+                            Choose S R Gas Agency as your trusted partner for innovative gas solutions that fuel progress, power industries, and drive success. With a steadfast commitment to excellence, we provide not just products, but peace of mind, empowering businesses to achieve their goals with confidence and reliability.
+                            Welcome to S R Gas Agency – Your Trusted Partner in Quality Gas Solutions
                         </Typography>
 
                         <Link href="/about">

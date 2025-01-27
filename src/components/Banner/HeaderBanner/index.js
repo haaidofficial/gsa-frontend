@@ -47,10 +47,10 @@ const banners = [
         title: "Efficient Delivery",
         image: "/assets/slides/IMG_1285.webp",
     },
-    {
-        title: "Efficient Delivery",
-        image: "/assets/slides/IMG_1286.webp",
-    },
+    // {
+    //     title: "Efficient Delivery",
+    //     image: "/assets/slides/IMG_1286.webp",
+    // },
     {
         title: "Efficient Delivery",
         image: "/assets/slides/IMG_1356.webp",
@@ -80,7 +80,8 @@ const HeaderBanner = () => {
                             key={index}
                             sx={{
                                 position: "relative",
-                                height: "290px",
+                                // height: "290px",
+                                height: "489px",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",

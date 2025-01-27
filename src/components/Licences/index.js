@@ -4,6 +4,7 @@ import ProductList from "../ProductList";
 import CertificateViewer from "../CertificateViewer";
 import styles from './Licences.module.css';
 import Image from "next/image";
+import HomeBanner from "../Banner/HomeBanner";
 
 function LicencesComp() {
 
@@ -35,6 +36,7 @@ function LicencesComp() {
     return (
         <>
             <HeaderBanner banners={banners} />
+            {/* <HomeBanner /> */}
             <div className={styles.mainSection}>
                 {/* <Grid2
                     container
@@ -72,7 +74,7 @@ function LicencesComp() {
                                         // layout="fill"
                                         // objectFit="cover"
                                         // quality={100}
-                                        className={styles.gridFrameImage}
+                                        className={`${styles.gridFrameImage} ${styles.imgSquare}`}
                                     />
                                 </div>
                             </div>
@@ -125,7 +127,7 @@ function LicencesComp() {
                                         // layout="fill"
                                         // objectFit="cover"
                                         // quality={100}
-                                        className={styles.gridFrameImage}
+                                        className={`${styles.gridFrameImage} ${styles.imgSquare}`}
                                     />
                                 </div>
                             </div>
@@ -138,7 +140,7 @@ function LicencesComp() {
                                         // layout="fill"
                                         // objectFit="cover"
                                         // quality={100}
-                                        className={styles.gridFrameImage}
+                                        className={`${styles.gridFrameImage} ${styles.imgSquare}`}
                                     />
                                 </div>
                                 <div className={styles.gridViewFrameItem}>

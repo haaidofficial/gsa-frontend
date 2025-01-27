@@ -49,10 +49,10 @@ const HomeBanner = () => {
             title: "Efficient Delivery",
             image: "/assets/slides/IMG_1285.webp",
         },
-        {
-            title: "Efficient Delivery",
-            image: "/assets/slides/IMG_1286.webp",
-        },
+        // {
+        //     title: "Efficient Delivery",
+        //     image: "/assets/slides/IMG_1286.webp",
+        // },
         {
             title: "Efficient Delivery",
             image: "/assets/slides/IMG_1356.webp",

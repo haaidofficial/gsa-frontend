@@ -101,6 +101,9 @@ const Footer = () => {
                 {/* COMPANY INFO Section */}
                 <Grid2 item size={{ xs: 12, sm: 12, md: 7 }}>
                     <Box className={styles.infoLinks}>
+                        <Typography className={styles.footerLinkHd} variant="h6" component="h2" sx={{ mb: 2 }}>
+                            Connect with Us
+                        </Typography>
                         <Grid2 container>
                             <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
                                 <div>

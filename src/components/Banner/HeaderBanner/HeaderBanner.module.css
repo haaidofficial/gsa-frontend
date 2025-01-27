@@ -1,48 +1,49 @@
-.bannerImgHolder{
+.bannerImgHolder {
     position: relative;
     width: 100%;
-    height: 290px;
+    /* height: 290px; */
+    height: 489px;
 }
 
 
-@media (max-width: 992px){
-    .bannerImgWrapper{
+@media (max-width: 992px) {
+    .bannerImgWrapper {
         height: 250px !important;
     }
 
-    .bannerImgHolder{
+    .bannerImgHolder {
         height: 250px !important;
     }
 }
 
 
-@media (max-width: 500px){
-    .bannerImgWrapper{
+@media (max-width: 500px) {
+    .bannerImgWrapper {
         height: 200px !important;
     }
 
-    .bannerImgHolder{
+    .bannerImgHolder {
         height: 200px !important;
     }
 }
 
-@media (max-width: 430px){
-    .bannerImgWrapper{
+@media (max-width: 430px) {
+    .bannerImgWrapper {
         height: 160px !important;
     }
 
-    .bannerImgHolder{
+    .bannerImgHolder {
         height: 160px !important;
     }
 }
 
 
-@media (max-width: 375px){
-    .bannerImgWrapper{
+@media (max-width: 375px) {
+    .bannerImgWrapper {
         height: 110px !important;
     }
 
-    .bannerImgHolder{
+    .bannerImgHolder {
         height: 110px !important;
     }
 }
