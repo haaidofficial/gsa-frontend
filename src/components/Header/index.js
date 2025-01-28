@@ -208,7 +208,7 @@ export default function Header() {
                     vertical: 'top',
                     horizontal: 'center',
                 }}
-                className={styles.subMenu}
+                className={`${styles.subMenu} ${styles.productsList}`}
 
             >
                 {productsNavList
@@ -311,7 +311,7 @@ const MobileMenu = ({ productsNavList }) => {
                         )}
                         {menu?.label === 'PRODUCTS' && (
                             <Collapse in={submenuOpen} timeout="auto" unmountOnExit>
-                                <List component="div" disablePadding>
+                                <List component="div" disablePadding className={`${styles.productsList}`}>
                                     {productsNavList
                                         .find((menu) => menu.label === 'PRODUCTS')
                                         ?.submenu?.map((submenuItem, index) => (

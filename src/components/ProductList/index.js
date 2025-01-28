@@ -47,7 +47,7 @@ const ProductList = () => {
 
 
             <List className={`${(otherProducts?.length > 8) ? styles.productsScroller : ''}`}>
-                {otherProducts?.map((item, index) => (
+                {otherProducts?.slice(0, 8)?.map((item, index) => (
                     <Link className={styles.productsList} href={`/products/${item.pageUrl}`} key={index} passHref>
                         <ListItem
                             sx={{
