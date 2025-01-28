@@ -1,6 +1,8 @@
 // components/MetaTags.js
 import Head from 'next/head';
 
+const ogImageUrl = 'https://srgasagency.in/assets/slides/IMG_1281.webp';
+
 const MetaTags = ({ title, description, url }) => {
     return (
         <Head>
@@ -12,6 +14,7 @@ const MetaTags = ({ title, description, url }) => {
             <meta name="robots" content="index, follow" />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
+            <meta property="og:image" content={ogImageUrl} />
             <meta property="og:url" content={url} />
             <meta property="og:type" content="website" />
             <meta name="twitter:card" content="summary_large_image" />
