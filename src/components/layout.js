@@ -16,6 +16,7 @@ import Footer from './Footer';
 import { DrawerProvider } from '@/context/AdminHeaderContext';
 import { APP_URL } from '@/constants/apiEndpoints';
 import MetaTags from './MetaTags';
+import FormEnqButton from './FormEnqButton';
 
 const adminPageRoutes = [
     '/admin/dashboard',
@@ -60,10 +61,12 @@ export default function RootLayout({ children }) {
     };
 
     const isAdminPage = adminPageRoutes.includes(router.pathname);
-  
+
 
     const isUserViewPage = !router.pathname.startsWith('/admin');
 
+    const showFormEnqButton = (router.pathname !== "/products/[productUrl]" && router.pathname !== "/contact" && router.pathname !== "/admin/login");
+    
     return (
         <>
             {/* <Head>
@@ -85,7 +88,7 @@ export default function RootLayout({ children }) {
                     <>
                         {renderHeader()}
                         {children}
-
+                        {showFormEnqButton && <FormEnqButton />}
                     </>
             }
 

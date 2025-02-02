@@ -66,7 +66,7 @@
 
 @media (max-width: 450px) {
     .slideImageContainer {
-        height: 110px;
+        /* height: 110px; */
         background-position: center bottom;
     }
 }

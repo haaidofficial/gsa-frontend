@@ -85,7 +85,7 @@ const Footer = () => {
                             </Typography>
 
                             {
-                                otherProducts?.map((item, index) => (
+                                otherProducts?.slice(0, 6)?.map((item, index) => (
                                     <div>
                                         <Link href={`/products/${item.pageUrl}`} key={index}>
                                             {item.title}
@@ -123,7 +123,7 @@ const Footer = () => {
                                 </div>
                             </Grid2>
                             <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
-                                <Box textAlign={'center'}>
+                                <Box textAlign={'center'} className={styles.footerLogoWrapper}>
                                     <Link href="/admin/login" target='_blank'>
                                         <img
                                             src="/assets/logo.jpeg"

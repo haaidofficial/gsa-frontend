@@ -40,10 +40,10 @@
 
 @media (max-width: 375px) {
     .bannerImgWrapper {
-        height: 110px !important;
+        /* height: 110px !important; */
     }
 
     .bannerImgHolder {
-        height: 110px !important;
+        /* height: 110px !important; */
     }
 }

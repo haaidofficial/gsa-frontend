@@ -15,6 +15,7 @@ export const Endpoints = {
     GetAccountDetails: '/api/auth/account-details',
     UpdateAccountDetails: '/api/auth/update-account',
     CreateEnquiry: '/api/enquiries/create-enquiry',
+    CreateNormalEnquiry: '/api/enquiries/create-normal-enquiry',
     GetEnquiries: '/api/enquiries/get-enquiries',
     DeleteEnquiry: '/api/enquiries/delete-enquiry',
 

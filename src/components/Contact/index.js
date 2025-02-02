@@ -143,6 +143,7 @@ const ContactUsComp = () => {
             }
             else {
                 payload.referrer = `${APP_URL}contact`;
+                createNormalEnquiry(payload);
                 // createProductEnquiry(payload);
                 // removeEnquiry();
             }
@@ -217,6 +218,29 @@ const ContactUsComp = () => {
 
     }
 
+
+    async function createNormalEnquiry(payload) {
+        if (payload) {
+
+            try {
+                const res = await axios.post(`${BASE_URL}${Endpoints.CreateNormalEnquiry}`, payload, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                if (res.data) {
+                    if (res.data?.message === "Enquiry submitted successfully") {
+                        // removeEnquiry();
+                    }
+                }
+
+            } catch (error) {
+                console.error('Create Enquiry Error:', error);
+            }
+        }
+
+    }
 
     return (
         <>
