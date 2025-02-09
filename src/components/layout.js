@@ -17,6 +17,7 @@ import { DrawerProvider } from '@/context/AdminHeaderContext';
 import { APP_URL } from '@/constants/apiEndpoints';
 import MetaTags from './MetaTags';
 import FormEnqButton from './FormEnqButton';
+import WhatsappChat from './WhatsappChat';
 
 const adminPageRoutes = [
     '/admin/dashboard',
@@ -66,7 +67,7 @@ export default function RootLayout({ children }) {
     const isUserViewPage = !router.pathname.startsWith('/admin');
 
     const showFormEnqButton = (router.pathname !== "/products/[productUrl]" && router.pathname !== "/contact" && router.pathname !== "/admin/login");
-    
+
     return (
         <>
             {/* <Head>
@@ -93,7 +94,10 @@ export default function RootLayout({ children }) {
             }
 
             {
-                isUserViewPage && <Footer />
+                isUserViewPage && <>
+                    <WhatsappChat tfn={'+917506050500'} />
+                    <Footer />
+                </>
             }
         </>
     );

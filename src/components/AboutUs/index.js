@@ -112,38 +112,71 @@ const AboutUsComp = () => {
                     <Grid2 container className={styles.offerings}>
                         <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
                             <ol className={styles.olcards}>
-                                <li style={{ "--cardColor": "#fc374e" }}>
+                                <li style={{
+                                    // "--cardColor": "#fc374e"
+                                    "--cardColor": "black"
+                                }}>
                                     <div className={styles.content}>
-                                        <div className={styles.title}>Oxygen (O₂)</div>
+                                        {/* <div className={styles.title}>Oxygen (O₂)</div> */}
+                                        <div className={styles.title}>MEDICAL OXYGEN GAS</div>
                                     </div>
                                 </li>
-                                <li style={{ "--cardColor": "#36aeb3" }}>
+                                <li style={{
+                                    // "--cardColor": "#36aeb3"
+                                    "--cardColor": "black"
+                                }}>
                                     <div className={styles.content}>
-                                        <div className={styles.title}>Nitrogen (N₂)</div>
+                                        {/* <div className={styles.title}>Nitrogen (N₂)</div> */}
+                                        <div className={styles.title}>INDUSTRIES OXYGEN GAS</div>
                                     </div>
                                 </li>
-                                <li style={{ "--cardColor": "#162d59" }}>
+                                <li style={{
+                                    // "--cardColor": "#162d59"
+                                    "--cardColor": "blue"
+                                }}>
                                     <div className={styles.content}>
-                                        <div className={styles.title}>Argon (Ar)</div>
+                                        {/* <div className={styles.title}>Argon (Ar)</div> */}
+                                        <div className={styles.title}>ARONG GAS</div>
+                                    </div>
+                                </li>
+                                <li style={{
+                                    // "--cardColor": "#AEB7B3" 
+                                    "--cardColor": "grey"
+                                }}>
+                                    <div className={styles.content}>
+                                        {/* <div className={styles.title}>Helium (He)</div> */}
+                                        <div className={styles.title}>NITROGEN GAS</div>
                                     </div>
                                 </li>
                             </ol>
                         </Grid2>
                         <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
-                            <ol className={styles.olcards} style={{ counterReset: "cardCount 3" }} >
-                                <li style={{ "--cardColor": "#AEB7B3" }}>
+                            <ol className={styles.olcards} style={{ counterReset: "cardCount 4" }} >
+                                <li style={{
+                                    // "--cardColor": "#EFCB68"
+                                    "--cardColor": "silver"
+                                }}>
                                     <div className={styles.content}>
-                                        <div className={styles.title}>Helium (He)</div>
+                                        {/* <div className={styles.title}>Hydrogen (H₂)</div> */}
+                                        <div className={styles.title}>CARBON DIOXIDE GAS</div>
                                     </div>
                                 </li>
-                                <li style={{ "--cardColor": "#EFCB68" }}>
+                                <li style={{
+                                    // "--cardColor": "#f15f0e"
+                                    "--cardColor": "brown"
+                                }}>
                                     <div className={styles.content}>
-                                        <div className={styles.title}>Hydrogen (H₂)</div>
+                                        {/* <div className={styles.title}>Carbon Dioxide (CO₂)</div> */}
+                                        <div className={styles.title}>HELIUM GAS</div>
                                     </div>
                                 </li>
-                                <li style={{ "--cardColor": "#f15f0e" }}>
+                                <li style={{
+                                    // "--cardColor": "#f15f0e"
+                                    "--cardColor": "red"
+                                }}>
                                     <div className={styles.content}>
-                                        <div className={styles.title}>Carbon Dioxide (CO₂)</div>
+                                        {/* <div className={styles.title}>Carbon Dioxide (CO₂)</div> */}
+                                        <div className={styles.title}>HYDROGEN GAS</div>
                                     </div>
                                 </li>
                             </ol>

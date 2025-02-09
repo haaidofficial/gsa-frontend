@@ -106,10 +106,19 @@ const Footer = () => {
                         </Typography>
                         <Grid2 container>
                             <Grid2 item size={{ xs: 12, sm: 12, md: 6 }}>
-                                <div>
+                                <div className={styles.tfnItemList}>
                                     <Typography sx={{ display: 'inline-block' }}> Mobile:  </Typography>{' '}
-                                    <Link href="tel:+918850849983" sx={{ display: 'block', mt: 2 }}>
+                                    <Link href="tel:+918850849983" className={styles.tfnItem}>
                                         8850849983
+                                    </Link>,{' '}
+                                    <Link href="tel:+919372979912" className={styles.tfnItem}>
+                                        9372979912
+                                    </Link>,{' '}<br />
+                                    <Link href="tel:+917506050500" className={styles.tfnItem}>
+                                        7506050500
+                                    </Link>,{' '}
+                                    <Link href="tel:+919372979912" className={styles.tfnItem}>
+                                        9372979912
                                     </Link>
                                 </div>
                                 <div>

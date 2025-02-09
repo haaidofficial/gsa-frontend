@@ -68,6 +68,13 @@
     text-transform: lowercase !important;
 }
 
+.tfnItemList{
+    margin-bottom: 10px;
+}
+
+.tfnItem{
+    margin-top: 0px !important;
+}
 
 @media (min-width: 900px) {
     .footerLogoWrapper {
