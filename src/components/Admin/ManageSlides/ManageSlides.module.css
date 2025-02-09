@@ -1,0 +1,17 @@
+.addProductLeftSpace {
+    padding-left: 100px;
+}
+
+
+@media (max-width: 1024px) {
+    .addProductLeftSpace {
+        padding-left: 250px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .addProductLeftSpace {
+        padding-left: 0px;
+    }
+}

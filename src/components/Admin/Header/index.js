@@ -21,6 +21,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import PeopleIcon from '@mui/icons-material/People';
 import SettingsIcon from '@mui/icons-material/Settings';
+import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
 import { useRouter } from 'next/router';
 import LogoutButton from '../Logout';
 import styles from './Header.module.css';
@@ -44,6 +45,10 @@ const navigationList = [
     {
         label: 'Account Settings',
         url: '/admin/account-settings'
+    },
+    {
+        label: 'Manage Slides',
+        url: '/admin/manage-slides'
     },
 ];
 
@@ -214,7 +219,7 @@ export default function AdminNavigationDrawer() {
                                             },
                                     ]}
                                 >
-                                    {index === 0 ? <InventoryIcon /> : index === 1 ? <AddCircleIcon /> : index === 2 ? <EmailIcon /> : index === 3 ? <PeopleIcon /> : <SettingsIcon />}
+                                    {index === 0 ? <InventoryIcon /> : index === 1 ? <AddCircleIcon /> : index === 2 ? <EmailIcon /> : index === 3 ? <PeopleIcon /> : index === 4 ? <ViewCarouselIcon /> : <SettingsIcon />}
                                 </ListItemIcon>
                                 <ListItemText
                                     primary={item.label}

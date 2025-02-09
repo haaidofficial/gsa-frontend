@@ -107,7 +107,7 @@ const ProductComp = ({ product }) => {
                         </div>
                     </Grid2>
 
-                    <Grid2 item size={{ xs: 12, sm: 6, md: 5 }}>
+                    <Grid2 item size={{ xs: 12, sm: 6, md: 3.5 }}>
                         <div className={styles.productGridOuter}>
                             <div className={styles.productOuterCont}>
                                 <div className={styles.productDescImages}>
@@ -144,9 +144,9 @@ const ProductComp = ({ product }) => {
                         </div>
                     </Grid2>
 
-                    <Grid2 item size={{ xs: 12, sm: 12, md: 2 }}>
+                    <Grid2 item size={{ xs: 12, sm: 12, md: 3.5 }}>
                         <div>
-                            <ProductList />
+                            <ProductList page="product-detail"/>
                         </div>
                     </Grid2>
                 </Grid2>

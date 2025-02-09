@@ -18,5 +18,9 @@ export const Endpoints = {
     CreateNormalEnquiry: '/api/enquiries/create-normal-enquiry',
     GetEnquiries: '/api/enquiries/get-enquiries',
     DeleteEnquiry: '/api/enquiries/delete-enquiry',
+    // carousel
+    AddCarousel: '/api/carousel/add-carousel',
+    DeleteCarousel: '/api/carousel/delete-carousel/',
+    GetCarousels: '/api/carousel/get-carousels',
 
 }

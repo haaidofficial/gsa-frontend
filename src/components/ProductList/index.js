@@ -7,8 +7,9 @@ import Link from "next/link";
 
 const colors = ["#000", "#808080", "#008080", "#004aad", "#004aad"];
 
-const ProductList = () => {
+const ProductList = (props) => {
 
+    const isProductDetailPage = props?.page === 'product-detail';
     const [otherProducts, setOtherProducts] = useState([]);
 
     useEffect(() => {
@@ -28,6 +29,9 @@ const ProductList = () => {
             console.error("Error fetching products:", error);
         }
     };
+
+
+
 
     return (
         <>
@@ -81,7 +85,7 @@ const ProductList = () => {
                             }}
                         // className={styles.productListText}
                         >
-                            <Typography variant="h6" component="div" className={styles.titleTxt}>
+                            <Typography variant="h6" component="div" className={`${styles.titleTxt} ${isProductDetailPage ? styles.productDetailFont : ''}`}>
                                 {item.title}
                             </Typography>
                         </ListItem>

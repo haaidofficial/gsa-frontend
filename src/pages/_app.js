@@ -3,18 +3,20 @@ import { useRouter } from "next/router";
 import RootLayout from "@/components/layout"; // Adjust the path if needed
 import { AuthProvider } from "@/context/AuthContext"; // Import the AuthProvider
 import "../styles/globals.css";
+import { CarouselProvider } from "@/context/CarouselContext";
 
 const adminPageRoutes = [
     '/admin/dashboard',
     '/admin/add-product',
     '/admin/account-settings',
     '/admin/edit-product/[productId]',
-    '/admin/enquiries'
+    '/admin/enquiries',
+    '/admin/manage-slides',
 ];
 
 export default function App({ Component, pageProps }) {
     const router = useRouter();
-    
+
     const isAdminPage = adminPageRoutes.includes(router.pathname);
     const is404Page = router.pathname === "/404";
 
@@ -30,7 +32,9 @@ export default function App({ Component, pageProps }) {
                             <Component {...pageProps} />
                         </AuthProvider>
                     ) : (
-                        <Component {...pageProps} />
+                        <CarouselProvider>
+                            <Component {...pageProps} />
+                        </CarouselProvider>
                     )}
                 </RootLayout>
             )}

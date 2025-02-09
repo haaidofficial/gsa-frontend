@@ -80,7 +80,7 @@ function LicencesComp() {
                             </div>
                             {/* second frame */}
                             <div className={styles.gridViewFrame}>
-                                <div className={styles.gridViewFrameItem}>
+                                <div className={`${styles.gridViewFrameItem} ${styles.floatingFrameItem}`}>
                                     <img
                                         src={'/assets/infra/IMG_0783-4.webp'}
                                         alt="Banner 4"
@@ -91,7 +91,7 @@ function LicencesComp() {
                                         className={`${styles.gridFrameImage} ${styles.imgSquare}`}
                                     />
                                 </div>
-                                <div className={styles.gridViewFrameItem}>
+                                <div className={`${styles.gridViewFrameItem} ${styles.floatingFrameItem}`}>
                                     <img
                                         src={'/assets/infra/IMG_1363-3.webp'}
                                         alt="Banner 4"
@@ -110,7 +110,7 @@ function LicencesComp() {
 
                             {/* third frame */}
                             <div className={styles.gridViewFrame}>
-                                <div className={styles.gridViewFrameItem}>
+                                <div className={`${styles.gridViewFrameItem} ${styles.floatingFrameItem}`}>
                                     <img
                                         src={'/assets/infra/IMG_1355-5.webp'}
                                         alt="Banner 4"
@@ -120,7 +120,7 @@ function LicencesComp() {
                                         className={styles.gridFrameImage}
                                     />
                                 </div>
-                                <div className={styles.gridViewFrameItem}>
+                                <div className={`${styles.gridViewFrameItem} ${styles.floatingFrameItem}`}>
                                     <img
                                         src={'/assets/infra/IMG_1281-8.webp'}
                                         alt="Banner 4"
@@ -133,7 +133,7 @@ function LicencesComp() {
                             </div>
                             {/* four frame */}
                             <div className={styles.gridViewFrame}>
-                                <div className={styles.gridViewFrameItem}>
+                                <div className={`${styles.gridViewFrameItem} ${styles.floatingFrameItem}`}>
                                     <img
                                         src={'/assets/infra/IMG_1364-7.webp'}
                                         alt="Banner 4"
@@ -143,7 +143,7 @@ function LicencesComp() {
                                         className={`${styles.gridFrameImage} ${styles.imgSquare}`}
                                     />
                                 </div>
-                                <div className={styles.gridViewFrameItem}>
+                                <div className={`${styles.gridViewFrameItem} ${styles.floatingFrameItem}`}>
                                     <img
                                         src={'/assets/infra/IMG_0307-6.webp'}
                                         alt="Banner 4"
@@ -157,7 +157,62 @@ function LicencesComp() {
                         </div>
 
                     </Grid2>
+                    {/* ---------------- third row ------------ */}
 
+                    <Grid2 item size={{ xs: 12, sm: 12, md: 3 }}>
+                        <div className={styles.gridView}>
+                            {/* third frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_8156.jpg'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                    </Grid2>
+                    <Grid2 item size={{ xs: 12, sm: 12, md: 3 }}>
+                        <div className={styles.gridView}>
+                            {/* third frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_8157.jpg'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={`${styles.gridFrameImage} ${styles.imgSquare}`}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                    </Grid2>
+                    <Grid2 item size={{ xs: 12, sm: 12, md: 3 }}>
+                        <div className={styles.gridView}>
+                            {/* third frame */}
+                            <div className={styles.gridViewFrame}>
+                                <div className={styles.gridViewFrameItem}>
+                                    <img
+                                        src={'/assets/infra/IMG_8158.jpg'}
+                                        alt="Banner 4"
+                                        // layout="fill"
+                                        // objectFit="cover"
+                                        // quality={100}
+                                        className={styles.gridFrameImage}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                    </Grid2>
                 </Grid2>
 
 

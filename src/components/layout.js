@@ -24,7 +24,8 @@ const adminPageRoutes = [
     '/admin/add-product',
     '/admin/account-settings',
     '/admin/edit-product/[productId]',
-    '/admin/enquiries'
+    '/admin/enquiries',
+    '/admin/manage-slides',
 ]
 
 

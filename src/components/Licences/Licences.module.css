@@ -58,6 +58,30 @@
     height: 300px;
 }
 
+@media (max-width: 1451px) {
+    .imgSquare {
+        width: 320px;
+    }
+}
+
+@media (max-width: 1401px) {
+    .imgSquare {
+        width: 300px;
+    }
+
+    .gridViewFrameItem {
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 1310px) {
+    .gridViewFrameItem {
+        width: 285px;
+    }
+}
+
+
 
 @media (max-width: 1300px) {
     .gridView {
@@ -65,6 +89,36 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 1250px) {
+    .gridViewFrameItem {
+        width: 255px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1201px) {
+    .floatingFrameItem {
+        float: right;
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 1151px) {
+    .floatingFrameItem {
+        width: 240px;
+        height: 260px;
+    }
+}
+
+
+@media (max-width: 1101px) {
+    .gridViewFrame {
+        margin-right: 0px;
+    }
+}
+
 
 @media (max-width: 800px) {
     .gridViewFrame {
@@ -95,6 +149,10 @@
 @media (max-width: 500px) {
     .gridViewFrameItem img {
         height: 200px;
+    }
+
+    .floatingFrameItem{
+        margin-left: 0px;
     }
 }
 
