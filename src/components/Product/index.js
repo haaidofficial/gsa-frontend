@@ -29,6 +29,7 @@ const ProductComp = ({ product }) => {
     const [otherProducts, setOtherProducts] = useState([]);
     const [openModal, setOpenModal] = useState(false); // State to control modal visibility
     const [modalImage, setModalImage] = useState(''); // State to store the image to display in modal
+    const [viewMore, setViewMore] = useState(false);
     const router = useRouter();
 
     useEffect(() => {
@@ -68,6 +69,18 @@ const ProductComp = ({ product }) => {
             });
         }
     };
+
+
+    const handleViewMore = () => {
+        setViewMore(prevState => !prevState);
+    }
+
+
+    let productImages = product?.images?.slice(0, 1);
+    if (viewMore) {
+        productImages = product?.images;
+    }
+
 
 
     const metaTitle = product?.title;
@@ -111,7 +124,7 @@ const ProductComp = ({ product }) => {
                         <div className={styles.productGridOuter}>
                             <div className={styles.productOuterCont}>
                                 <div className={styles.productDescImages}>
-                                    {product.images.map((image, index) => (
+                                    {productImages?.map((image, index) => (
                                         <div key={index} style={{ position: 'relative' }}>
                                             {/* Image thumbnail */}
                                             <img
@@ -139,6 +152,15 @@ const ProductComp = ({ product }) => {
                                             </Tooltip>
                                         </div>
                                     ))}
+
+                                    {
+                                        product?.images?.length > 1 && <Box sx={{ textAlign: 'center', width: '100%' }}>
+                                            <Button variant='contained' onClick={handleViewMore} size='small'>
+                                                {viewMore ? 'View Less' : 'View More'}
+                                            </Button>
+                                        </Box>
+                                    }
+
                                 </div>
                             </div>
                         </div>
@@ -146,7 +168,7 @@ const ProductComp = ({ product }) => {
 
                     <Grid2 item size={{ xs: 12, sm: 12, md: 3.5 }}>
                         <div>
-                            <ProductList page="product-detail"/>
+                            <ProductList page="product-detail" />
                         </div>
                     </Grid2>
                 </Grid2>
