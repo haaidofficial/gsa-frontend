@@ -178,7 +178,7 @@ const HomePage = () => {
             {/* Customers section start */}
             <Box className={styles.customerSection}>
                 <Typography className={styles.customerSectionHd} variant="h4" sx={{ textAlign: 'center' }}>
-                    Customers We Serve
+                    Industries We Serve
                 </Typography>
                 <Grid2 container
                     sx={{

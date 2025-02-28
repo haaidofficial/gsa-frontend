@@ -290,6 +290,15 @@ const ContactUsComp = () => {
                                 <Typography sx={{ marginTop: 1, color: '#666' }} className={styles.infoTxt}>
                                     <a href="tel:+918850849983" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         8850849983
+                                    </a>,{' '}
+                                    <a href="tel:+919372979912" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        9372979912
+                                    </a>,{' '}
+                                    <a href="tel:+917506050500" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        7506050500
+                                    </a>,{' '}
+                                    <a href="tel:+919372979912" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        9372979912
                                     </a>{' '}
                                     {/* /{' '}
                                     <a href="tel:+912248262440" style={{ textDecoration: 'none', color: 'inherit' }}>
